@@ -52,7 +52,7 @@ function Navbar(props) {
 
         <div>
           <h4 className="lg:text-3xl text-xl font-semibold tracking-widest">
-            <a href="#">Exclusive</a>
+            <a href="/">Exclusive</a>
           </h4>
         </div>
 

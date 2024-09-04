@@ -8,7 +8,7 @@ function Footer(props) {
         {/* Subscribe Section */}
         <div className="col-span-1 md:col-span-1">
           <h4 className="lg:text-3xl text-xl font-semibold tracking-widest">
-            <a href="#">Exclusive</a>
+            <a href="/">Exclusive</a>
           </h4>
           <p className="mt-4 sm:text-base text-sm">Subscribe</p>
           <p className="text-gray-400 sm:text-base text-sm">
@@ -43,7 +43,7 @@ function Footer(props) {
           <h3 className="font-semibold text-lg">Account</h3>
           <ul className="mt-4 space-y-2">
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 My account
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -52,7 +52,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 Login / Register
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -61,7 +61,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 Cart
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -70,7 +70,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 Wishlist
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -79,7 +79,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 Shop
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -95,7 +95,7 @@ function Footer(props) {
           <h3 className="font-semibold text-lg">Quick Link</h3>
           <ul className="mt-4 space-y-2">
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 Privacy Policy
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -104,7 +104,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 Terms of Use
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -113,7 +113,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 FAQ
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
@@ -122,7 +122,7 @@ function Footer(props) {
               </a>
             </li>
             <li>
-              <a href="#" className="relative group">
+              <a href="/" className="relative group">
                 Contact
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
