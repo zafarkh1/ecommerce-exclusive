@@ -31,7 +31,10 @@ function Services() {
       </h2>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
         {items.map((item, index) => (
-          <div className="flex flex-col lg:gap-4 gap-2 items-center">
+          <div
+            className="flex flex-col lg:gap-4 gap-2 items-center"
+            key={index}
+          >
             <div className="bg-gray-400 text-4xl rounded-full p-4">
               {item.icon}
             </div>

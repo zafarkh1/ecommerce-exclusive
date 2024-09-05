@@ -1,92 +1,17 @@
 import { useState } from "react";
+import { IoHeartOutline, IoEyeOutline, IoHeart } from "react-icons/io5";
+import { products } from "../api/data";
+import { useStore } from "../zustand/store";
+import { useNavigate } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
-import { IoEyeOutline, IoHeartOutline } from "react-icons/io5";
 
-function Products(props) {
+function Products() {
   const [visible, setVisible] = useState(4);
-  const items = [
-    {
-      id: 1,
-      title: "backpack",
-      price: "100$",
-      rating: 4,
-      img: "/images/backpack-1.jpg",
-      reviews: 50,
-      desc: "Durable and spacious backpack perfect for traveling and daily use.",
-    },
-    {
-      id: 2,
-      title: "headphones",
-      price: "150$",
-      rating: 4,
-      img: "/images/headphones-2.jpg",
-      reviews: 120,
-      desc: "Wireless noise-cancelling headphones with crystal clear sound and long battery life.",
-    },
-    {
-      id: 3,
-      title: "porridge",
-      price: "5$",
-      rating: 4,
-      img: "/images/porridge-1.jpg",
-      reviews: 35,
-      desc: "Healthy and nutritious instant porridge for a quick and satisfying breakfast.",
-    },
-    {
-      id: 4,
-      title: "PS 5",
-      price: "500$",
-      rating: 5,
-      img: "/images/ps5-1.jpg",
-      reviews: 200,
-      desc: "Next-generation gaming console with stunning graphics and fast loading times.",
-    },
-    {
-      id: 5,
-      title: "Redmi",
-      price: "250$",
-      rating: 4,
-      img: "/images/redmi-1.jpg",
-      reviews: 80,
-      desc: "Affordable smartphone with impressive features and a long-lasting battery.",
-    },
-    {
-      id: 6,
-      title: "Samsung S24",
-      price: "999$",
-      rating: 5,
-      img: "/images/samsung-s24-1.jpg",
-      reviews: 150,
-      desc: "High-end smartphone with an exceptional camera and advanced display technology.",
-    },
-    {
-      id: 7,
-      title: "Artel TV",
-      price: "300$",
-      rating: 4,
-      img: "/images/artel-tv-1.jpg",
-      reviews: 60,
-      desc: "Smart TV with a sleek design and vivid display for an immersive viewing experience.",
-    },
-    {
-      id: 8,
-      title: "Boss watches",
-      price: "200$",
-      rating: 4,
-      img: "/images/boss-watches-1.jpg",
-      reviews: 90,
-      desc: "Elegant and stylish watches that combine functionality and fashion.",
-    },
-    {
-      id: 9,
-      title: "Wet wipes",
-      price: "3$",
-      rating: 4,
-      img: "/images/wet-wipes-1.jpg",
-      reviews: 40,
-      desc: "Soft and refreshing wet wipes for on-the-go cleaning and hygiene.",
-    },
-  ];
+  const { cart, addToCart, getTotalItems, toggleFavorite, favorites } =
+    useStore();
+  const navigate = useNavigate();
+
+  const isFavorited = (id) => favorites.some((item) => item.id === id);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -107,21 +32,48 @@ function Products(props) {
         <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">Our Products</span>
       </p>
+
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 sm:gap-8 gap-6 lg:my-8 my-6">
-        {items.slice(0, visible).map((item, index) => (
-          <div
-            key={index}
-            className="cursor-pointer transition-transform transform hover:scale-105"
-          >
-            <div className="relative overflow-hidden rounded-lg shadow-lg">
+        {products.slice(0, visible).map((item, index) => (
+          <div key={index} className="cursor-pointer">
+            <div className="relative overflow-hidden rounded-lg shadow-lg group">
               <img
                 src={item.img}
                 alt={item.title}
-                className="object-cover w-full h-[18rem] sm:h-[15rem] md:h-[12rem] lg:h-[14rem]"
+                onClick={() => {
+                  navigate(`/product/${item.id}`);
+                  window.scrollTo(0, 0);
+                }}
+                className="object-cover w-full h-[18rem] sm:h-[15rem] md:h-[12rem] lg:h-[14rem] 
+                transition-transform transform duration-300 hover:scale-105"
               />
-              <IoHeartOutline className="absolute top-5 right-2 bg-white rounded-full p-1 text-2xl" />
-              <IoEyeOutline className="absolute top-12 right-2 bg-white rounded-full p-1 text-2xl" />
+
+              {/* Toggle Like Icon */}
+              <button
+                onClick={() => toggleFavorite(item)}
+                className="absolute top-2 right-2 rounded-full p-1 text-xl bg-white"
+              >
+                {isFavorited(item.id) ? (
+                  <IoHeart className="text-red-500" />
+                ) : (
+                  <IoHeartOutline />
+                )}
+              </button>
+
+              <button className="absolute top-11 right-2 bg-white rounded-full p-1 text-xl">
+                <IoEyeOutline className="  " />
+              </button>
+
+              <div className="absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in">
+                <button
+                  className="bg-black text-white w-full py-2 capitalize"
+                  onClick={() => addToCart(item)}
+                >
+                  Add to cart
+                </button>
+              </div>
             </div>
+
             <div className="mt-2">
               <p className="text-lg font-medium capitalize">{item.title}</p>
               <div className="flex items-center space-x-2 mt-1  ">
@@ -137,8 +89,9 @@ function Products(props) {
           </div>
         ))}
       </div>
+
       <div className="flex justify-center items-center lg:my-12 my-6">
-        {visible < items.length ? (
+        {visible < products.length ? (
           <button
             className="lg:py-2 py-1 lg:px-6 px-3 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible((prev) => prev + 4)}

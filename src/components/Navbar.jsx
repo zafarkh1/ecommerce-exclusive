@@ -4,12 +4,16 @@ import {
   MdOutlineShoppingCart,
   MdOutlineSearch,
   MdOutlineMenu,
+  MdDeleteForever,
 } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
+import { useStore } from "../zustand/store";
 
 function Navbar(props) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { cart, favorites, removeFromCart, decreaseFromCart, addToCart } =
+    useStore();
 
   const Linkitems = [
     { title: "Home", link: "" },
@@ -83,12 +87,61 @@ function Navbar(props) {
           ))}
         </ul>
 
-        <ul className="flex items-center lg:gap-12 gap-6 sm:text-2xl text-xl">
+        <ul className="relative flex items-center lg:gap-12 gap-6 sm:text-3xl text-2xl">
           <button className="hidden lg:block">
             <MdOutlineSearch />
           </button>
-          <CiHeart />
-          <MdOutlineShoppingCart />
+          <div className="relative">
+            <CiHeart />
+            <span className="absolute -top-1 right-0 bg-red-700 text-white h-4 w-4 text-center rounded-full text-xs">
+              {favorites.length}
+            </span>
+          </div>
+          <div className="relative group">
+            <MdOutlineShoppingCart className="cursor-pointer" />
+            <span className="absolute -top-1 right-0 bg-red-700 text-white h-4 w-4 text-center rounded-full text-xs">
+              {cart.length}
+            </span>
+            <div className="absolute top-10 right-0 bg-gray-100 shadow-lg rounded-lg w-64 p-4 space-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              {cart.length > 0 ? (
+                cart.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-between"
+                  >
+                    <div>
+                      <span className="capitalize text-lg">{item.title}</span>
+                      <span className="block text-sm text-gray-500">
+                        {item.price} {" x "} {item.quantity}
+                      </span>
+                    </div>
+                    <div className="flex space-x-2 items-center text-xl">
+                      <button
+                        onClick={() => decreaseFromCart(item.id)}
+                        className="bg-gray-200 rounded-full h-6 w-6 flex items-center justify-center text-center"
+                      >
+                        -
+                      </button>
+                      <button
+                        onClick={() => addToCart(item)}
+                        className="bg-gray-200 rounded-full h-6 w-6 flex items-center justify-center text-center"
+                      >
+                        +
+                      </button>
+                      <button
+                        onClick={() => removeFromCart(item.id)}
+                        className="text-red-500 hover:text-red-700"
+                      >
+                        <MdDeleteForever />
+                      </button>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <p className="text-center text-gray-500">Your cart is empty</p>
+              )}
+            </div>
+          </div>
         </ul>
       </div>
     </div>
