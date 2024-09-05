@@ -7,8 +7,7 @@ import { MdOutlineStar } from "react-icons/md";
 
 function Products() {
   const [visible, setVisible] = useState(4);
-  const { cart, addToCart, getTotalItems, toggleFavorite, favorites } =
-    useStore();
+  const { addToCart, toggleFavorite, favorites } = useStore();
   const navigate = useNavigate();
 
   const isFavorited = (id) => favorites.some((item) => item.id === id);
