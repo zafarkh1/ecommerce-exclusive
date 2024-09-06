@@ -30,12 +30,12 @@ function ProductDetail(props) {
   };
 
   return (
-    <div className="container mx-auto my-[11rem]">
-      <div className="grid lg:grid-cols-2 ">
-        {/*              Image Section          */}
-        <div className="col-span-1 flex space-x-2">
+    <div className="container mx-auto md:my-[11rem] my-[8rem]">
+      <div className="grid lg:grid-cols-2 xl:gap-0 gap-6">
+        {/* Image Section for lg and above */}
+        <div className="col-span-1 space-x-2 flex">
           {/* Thumbnail Images */}
-          <div className="flex flex-col space-y-4">
+          <div className="md:flex md:flex-col space-y-4 hidden">
             {product.capture.map((img, index) => (
               <img
                 src={img}
@@ -51,37 +51,37 @@ function ProductDetail(props) {
             <img
               src={product.img}
               alt={product.title}
-              className="h-[30rem] w-auto object-cover border border-gray-300 rounded-md"
+              className="h-[30rem] md:w-auto w-full object-cover border border-gray-300 rounded-md"
             />
           </div>
         </div>
 
-        {/*              Content         */}
+        {/* Content Section */}
         <div className="col-span-1">
-          <h3 className="lg:text-3xl capitalize font-semibold">
+          <h3 className="lg:text-3xl text-xl capitalize font-semibold md:text-left text-center">
             {product.title}
           </h3>
-          <div className="flex items-center space-x-2 my-2 text-lg">
+          <div className="flex items-center space-x-2 my-2 text-lg md:justify-start justify-center">
             <span className="flex">{renderStars(product.rating)}</span>
             <span className="text-gray-500 text-sm">
               ({product.reviews} reviews)
             </span>
           </div>
-          <span className="text-3xl font-semibold text-red-700">
+          <p className="lg:text-3xl text-2xl font-semibold text-red-700 md:text-left text-center">
             {cart.find((c) => c.id === product.id)
               ? cart.find((c) => c.id === product.id).quantity *
                   parseInt(product.price.slice(0, -1)) +
                 "$"
               : product.price}
-          </span>
+          </p>
 
-          <p className="lg:w-1/2 mt-6 border-b-2 pb-6 border-gray-600">
+          <p className="xl:w-1/2 lg:mt-6 mt-3 border-b-2 md:pb-6 pb-3 border-gray-600 md:text-left text-center">
             {product.desc}
           </p>
 
-          {/*                      Count && Like && Buy */}
+          {/* Count, Like, Buy */}
           <div className="flex items-center gap-4 my-6">
-            {/*    Count    */}
+            {/* Count */}
             <div className="flex items-center border border-gray-300 rounded overflow-hidden">
               <button
                 onClick={() => decreaseFromCart(product.id)}
@@ -91,7 +91,7 @@ function ProductDetail(props) {
                 <span className="text-2xl">-</span>
               </button>
 
-              <div className="px-8 py-2 border-x-2 border-gray-300 font-medium">
+              <div className="md:px-8 px-4 py-2 border-x-2 border-gray-300 font-medium">
                 {cart.find((item) => item.id === product.id)?.quantity || 0}
               </div>
 
@@ -104,10 +104,10 @@ function ProductDetail(props) {
               </button>
             </div>
 
-            {/*     Buy    */}
+            {/* Buy */}
             <div>
               <button
-                className="py-2 px-8 bg-rose-700 hover:bg-rose-600 transform transition-all 
+                className="py-2 md:px-8 px-4 bg-rose-700 hover:bg-rose-600 transform transition-all 
                    duration-300 text-white rounded"
                 onClick={openModal}
               >
@@ -115,9 +115,9 @@ function ProductDetail(props) {
               </button>
             </div>
 
-            {/*     Like    */}
+            {/* Like */}
             <div
-              className="text-2xl p-1 border-2 roudned"
+              className="text-2xl p-1 border-2 rounded"
               onClick={() => toggleFavorite(product)}
             >
               {isFavorited(product.id) ? (
@@ -128,7 +128,7 @@ function ProductDetail(props) {
             </div>
           </div>
 
-          {/*           Delivery           */}
+          {/* Delivery Info */}
           <div className="mt-8">
             <div className="flex items-center gap-4 border-2 p-4 rounded-t-lg">
               <div className="text-4xl">

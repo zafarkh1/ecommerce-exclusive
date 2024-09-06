@@ -24,7 +24,7 @@ function Navbar(props) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -40,7 +40,7 @@ function Navbar(props) {
 
   return (
     <div
-      className={`fixed top-[2.7rem] left-0 right-0 z-10 transition-all border-b-2 ${
+      className={`fixed top-[2.7rem] left-0 right-0 z-10 transition-all duration-100 ease-linear border-b-2 ${
         scrolled ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
@@ -98,11 +98,14 @@ function Navbar(props) {
             </span>
           </div>
           <div className="relative group">
-            <MdOutlineShoppingCart className="cursor-pointer" />
-            <span className="absolute -top-1 right-0 bg-red-700 text-white h-4 w-4 text-center rounded-full text-xs">
+            <MdOutlineShoppingCart className="cursor-pointer z-20" />
+            <span className="absolute -top-1 right-0 bg-red-700 text-white h-4 w-4 text-center rounded-full text-xs z-20">
               {cart.length}
             </span>
-            <div className="absolute top-10 right-0 bg-gray-100 shadow-lg rounded-lg w-64 p-4 space-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div
+              className="absolute sm:top-[1.8rem] top-[1.2rem] right-0 bg-gray-100 shadow-lg rounded-lg w-64 lg:px-4 px-2 py-2 lg:space-y-4 sm:space-y-2 opacity-0 invisible 
+    group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto transition-opacity duration-500 z-10"
+            >
               {cart.length > 0 ? (
                 cart.map((item, index) => (
                   <div
@@ -138,7 +141,9 @@ function Navbar(props) {
                   </div>
                 ))
               ) : (
-                <p className="text-center text-gray-500">Your cart is empty</p>
+                <p className="text-center text-gray-500 text-lg">
+                  Your cart is empty
+                </p>
               )}
             </div>
           </div>
