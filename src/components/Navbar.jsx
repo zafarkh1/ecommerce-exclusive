@@ -8,12 +8,14 @@ import {
 } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import { useStore } from "../zustand/store";
+import { useModalStore } from "../zustand/modalStore";
 
 function Navbar(props) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { cart, favorites, removeFromCart, decreaseFromCart, addToCart } =
     useStore();
+  const { isOpen } = useModalStore();
 
   const Linkitems = [
     { title: "Home", link: "" },
@@ -40,9 +42,9 @@ function Navbar(props) {
 
   return (
     <div
-      className={`fixed top-[2.7rem] left-0 right-0 z-10 transition-all duration-100 ease-linear border-b-2 ${
-        scrolled ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-[2.7rem] left-0 right-0 z-10 transition-all duration-100 ease-linear ${
+        isOpen ? "border-b-0 " : "border-b-2"
+      }  ${scrolled ? "bg-white shadow-lg" : "bg-transparent"}`}
     >
       <div className="relative container mx-auto flex justify-between items-center lg:py-4 py-3">
         <div className="lg:hidden">

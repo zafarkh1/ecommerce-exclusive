@@ -72,7 +72,7 @@ function ProductDetail(props) {
               ? cart.find((c) => c.id === product.id).quantity *
                   parseInt(product.price.slice(0, -1)) +
                 "$"
-              : product.price}
+              : "0 $"}
           </p>
 
           <p className="xl:w-1/2 lg:mt-6 mt-3 border-b-2 md:pb-6 pb-3 border-gray-600 md:text-left text-center">
