@@ -1,12 +1,29 @@
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 function Showcase() {
   const items = [
-    { title: "Headphone series", img: "/images/iphone.jpg" },
-    { title: "Playstation series", img: "/images/ps5-4.webp" },
-    { title: "Samsung series", img: "/images/samsung-s24-3.webp" },
-    { title: "Watch series", img: "/images/boss-watches-3.jpg" },
+    {
+      title: "Iphone series",
+      img: "/images/iphone.jpg",
+      keyword: "iphone",
+    },
+    {
+      title: "Playstation series",
+      img: "/images/ps5-4.webp",
+      keyword: "Ps",
+    },
+    {
+      title: "Samsung series",
+      img: "/images/samsung-s24-3.webp",
+      keyword: "Samsung",
+    },
+    {
+      title: "Watch series",
+      img: "/images/boss-watches-3.jpg",
+      keyword: "Watch",
+    },
   ];
 
   var settings = {
@@ -26,7 +43,8 @@ function Showcase() {
             key={index}
             className="relative bg-black rounded-xl lg:px-10 sm:px-4 px-1 lg:py-10 sm:py-6 py-3"
           >
-            <div
+            <Link
+              to={`/products?search=${item.keyword}`}
               className="flex items-center lg:gap-14  bg-no-repeat lg:bg-center bg-right-bottom bg-contain"
               style={{ backgroundImage: `url(${item.img})` }}
             >
@@ -42,7 +60,7 @@ function Showcase() {
                   </span>
                 </button>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </Slider>

@@ -31,7 +31,7 @@ function ProductDetail(props) {
 
   return (
     <div className="container mx-auto md:my-[11rem] my-[8rem]">
-      <div className="grid lg:grid-cols-2 xl:gap-0 gap-6">
+      <div className="grid lg:grid-cols-2 xl:gap-4 gap-6">
         {/* Image Section for lg and above */}
         <div className="col-span-1 space-x-2 flex">
           {/* Thumbnail Images */}

@@ -9,6 +9,7 @@ import {
 import { FaTimes } from "react-icons/fa";
 import { useStore } from "../zustand/store";
 import { useModalStore } from "../zustand/modalStore";
+import { useNavigate } from "react-router-dom";
 
 function Navbar(props) {
   const [open, setOpen] = useState(false);
@@ -16,6 +17,7 @@ function Navbar(props) {
   const { cart, favorites, removeFromCart, decreaseFromCart, addToCart } =
     useStore();
   const { isOpen } = useModalStore();
+  const navigate = useNavigate();
 
   const Linkitems = [
     { title: "Home", link: "" },
@@ -99,55 +101,17 @@ function Navbar(props) {
               {favorites.length}
             </span>
           </div>
-          <div className="relative group">
-            <MdOutlineShoppingCart className="cursor-pointer z-20" />
+          <div className="relative">
+            <MdOutlineShoppingCart
+              className="cursor-pointer z-20"
+              onClick={() => {
+                navigate("/cart");
+                window.scrollTo(0, 0);
+              }}
+            />
             <span className="absolute -top-1 right-0 bg-red-700 text-white h-4 w-4 text-center rounded-full text-xs z-20">
               {cart.length}
             </span>
-            <div
-              className="absolute sm:top-[1.8rem] top-[1.2rem] right-0 bg-gray-100 shadow-lg rounded-lg w-64 lg:px-4 px-2 py-2 lg:space-y-4 sm:space-y-2 opacity-0 invisible 
-    group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto transition-opacity duration-500 z-10"
-            >
-              {cart.length > 0 ? (
-                cart.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-between"
-                  >
-                    <div>
-                      <span className="capitalize text-lg">{item.title}</span>
-                      <span className="block text-sm text-gray-500">
-                        {item.price} {" x "} {item.quantity}
-                      </span>
-                    </div>
-                    <div className="flex space-x-2 items-center text-xl">
-                      <button
-                        onClick={() => decreaseFromCart(item.id)}
-                        className="bg-gray-200 rounded-full h-6 w-6 flex items-center justify-center text-center"
-                      >
-                        -
-                      </button>
-                      <button
-                        onClick={() => addToCart(item)}
-                        className="bg-gray-200 rounded-full h-6 w-6 flex items-center justify-center text-center"
-                      >
-                        +
-                      </button>
-                      <button
-                        onClick={() => removeFromCart(item.id)}
-                        className="text-red-500 hover:text-red-700"
-                      >
-                        <MdDeleteForever />
-                      </button>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <p className="text-center text-gray-500 text-lg">
-                  Your cart is empty
-                </p>
-              )}
-            </div>
           </div>
         </ul>
       </div>

@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 function Arrival() {
+  const navigate = useNavigate();
   return (
     <div className="container mx-auto lg:pt-12 py-6 md:mb-0 mb-[15rem]">
-      <p className="text-red-700 flex items-center gap-4 lg:text-lg ">
+      <p className="text-red-700 flex items-center gap-4 lg:text-lg">
         <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">Featured</span>
       </p>
@@ -11,60 +14,102 @@ function Arrival() {
 
       <div className="grid lg:grid-cols-2 lg:gap-8 gap-4 lg:my-8 text-white">
         <div
-          className="relative bg-no-repeat bg-center bg-contain bg-black h-[15rem] lg:h-[30rem] rounded-xl"
-          style={{ backgroundImage: "url('/images/arrival-1.png')" }}
+          className="relative bg-no-repeat bg-center bg-contain bg-black h-[15rem] lg:h-[30rem] rounded-xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+          style={{
+            backgroundImage:
+              "url('https://ae04.alicdn.com/kf/S8966835707534f889c354bad660e28efN.jpg')",
+          }}
+          onClick={() => {
+            navigate("/product/3");
+            window.scrollTo(0, 0);
+          }}
         >
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full px-4">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
+
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
             <h3 className="text-2xl font-bold">PS 5</h3>
             <p className="md:text-base text-sm">
               Next-generation gaming console with stunning graphics and fast
               loading times.
             </p>
-            <button className="underline">Shop now</button>
+            <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
+              Shop now
+            </button>
           </div>
         </div>
 
         <div className="grid grid-rows-2 gap-8 h-[30rem]">
           <div
-            className="relative bg-contain bg-black bg-no-repeat bg-right rounded-xl h-[15rem] lg:h-auto"
-            style={{ backgroundImage: "url('/images/arrival-2.png')" }}
+            className="relative bg-contain bg-black bg-no-repeat bg-right rounded-xl h-[15rem] lg:h-auto transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+            style={{
+              backgroundImage:
+                "url('https://www.cnet.com/a/img/resize/4176b2e9cb62db9dccea926e3b5076e184e377ba/hub/2021/12/10/955a0f0d-e82f-4883-a1c3-48c9d0bec41f/splash.jpg?auto=webp&fit=crop&height=675&width=1200')",
+            }}
+            onClick={() => {
+              navigate("/product/20");
+              window.scrollTo(0, 0);
+            }}
           >
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full px-4">
-              <h3 className="text-2xl font-bold">Samsung S24</h3>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
+
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
+              <h3 className="text-2xl font-bold">iPhone 13 Pro</h3>
               <p className="md:text-base text-sm">
-                High-end smartphone with an exceptional camera and advanced
-                display technology.
+                The latest iPhone with A15 Bionic chip, Super Retina XDR
+                display, and Pro camera system.
               </p>
-              <button className="underline">Shop now</button>
+              <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
+                Shop now
+              </button>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-8 gap-4">
             <div
-              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl"
-              style={{ backgroundImage: "url('/images/arrival-3.png')" }}
+              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+              style={{
+                backgroundImage:
+                  "url('https://wallup.net/wp-content/uploads/2017/11/17/230726-watch-luxury_watches-748x374.jpg')",
+              }}
+              onClick={() => {
+                navigate("/product/19");
+                window.scrollTo(0, 0);
+              }}
             >
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full px-4">
-                <h3 className="text-2xl font-bold">Artel TV</h3>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
+
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
+                <h3 className="text-2xl font-bold">Luxury Watch</h3>
                 <p className="md:text-base text-sm">
-                  Smart TV with a sleek design and vivid display for an
-                  immersive viewing experience.
+                  Elegant luxury watch with a premium design and precise
+                  timekeeping.
                 </p>
-                <button className="underline">Shop now</button>
+                <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
+                  Shop now
+                </button>
               </div>
             </div>
 
             <div
-              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl"
-              style={{ backgroundImage: "url('/images/arrival-4.png')" }}
+              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+              style={{
+                backgroundImage:
+                  "url('https://images.pexels.com/photos/9767549/pexels-photo-9767549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+              }}
+              onClick={() => {
+                navigate("/product/7");
+                window.scrollTo(0, 0);
+              }}
             >
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full px-4">
-                <h3 className="text-2xl font-bold">Boss Watches</h3>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
+
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
+                <h3 className="text-2xl font-bold">Bluetooth Speaker</h3>
                 <p className="md:text-base text-sm">
-                  Elegant and stylish watches that combine functionality and
-                  fashion.
+                  Portable Bluetooth speaker with deep bass and long battery
+                  life.
                 </p>
-                <button className="underline underline-offset-2">
+                <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
                   Shop now
                 </button>
               </div>

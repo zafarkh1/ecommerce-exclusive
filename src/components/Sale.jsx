@@ -58,7 +58,7 @@ function Sale(props) {
           </h1>
           <Countdown date={item.countdown.date} renderer={renderer} />
           <div className="flex md:justify-stretch justify-center">
-            <button className="lg:py-2 py-1 lg:px-6 px-3 bg-lime-500 text-white cursor-pointer rounded-lg">
+            <button className="lg:py-2 py-1 lg:px-6 px-3 bg-lime-500 hover:bg-lime-400 text-white cursor-pointer rounded-lg">
               Buy now
             </button>
           </div>

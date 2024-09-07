@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { IoHeartOutline, IoEyeOutline, IoHeart } from "react-icons/io5";
-import { products } from "../api/data";
+import { IoHeartOutline, IoHeart } from "react-icons/io5";
+import { products as allProducts } from "../api/data";
 import { useStore } from "../zustand/store";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
+import { useTabStore } from "../zustand/tabStore"; // Import Zustand store
 
 function Products() {
   const [visible, setVisible] = useState(4);
-  const { addToCart, toggleFavorite, favorites } = useStore();
+  const { activeTab } = useTabStore(); // Get active tab from store
   const navigate = useNavigate();
+  const { addToCart, toggleFavorite, favorites } = useStore();
 
   const isFavorited = (id) => favorites.some((item) => item.id === id);
 
@@ -25,6 +27,12 @@ function Products() {
     return stars;
   };
 
+  // Filter products based on active tab
+  const filteredProducts =
+    activeTab === "All"
+      ? allProducts
+      : allProducts.filter((product) => product.category === activeTab);
+
   return (
     <div className="container mx-auto lg:pt-10 py-4">
       <p className="text-red-700 flex items-center gap-4 lg:text-lg">
@@ -33,7 +41,7 @@ function Products() {
       </p>
 
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 sm:gap-8 gap-6 lg:my-8 my-6">
-        {products.slice(0, visible).map((item, index) => (
+        {filteredProducts.slice(0, visible).map((item, index) => (
           <div key={index} className="cursor-pointer">
             <div className="relative overflow-hidden rounded-lg shadow-lg group">
               <img
@@ -59,9 +67,9 @@ function Products() {
                 )}
               </button>
 
-              <button className="absolute top-11 right-2 bg-white rounded-full p-1 text-xl">
+              {/* <button className="absolute top-11 right-2 bg-white rounded-full p-1 text-xl">
                 <IoEyeOutline className="  " />
-              </button>
+              </button> */}
 
               <div className="absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in">
                 <button
@@ -90,13 +98,15 @@ function Products() {
       </div>
 
       <div className="flex justify-center items-center lg:my-12 my-6">
-        {visible < products.length ? (
+        {visible < filteredProducts.length ? (
           <button
             className="lg:py-2 py-1 lg:px-6 px-3 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible((prev) => prev + 4)}
           >
             View all products
           </button>
+        ) : filteredProducts.length < 5 ? (
+          <div></div>
         ) : (
           <button
             className="lg:py-2 py-1 lg:px-6 px-3 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
