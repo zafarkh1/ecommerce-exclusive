@@ -1,13 +1,12 @@
-import React from "react";
 import Countdown from "react-countdown";
 
-function Sale(props) {
+function Sale() {
   const items = [
     {
       title: "Enhance your music experience",
       img: "/images/sale-1.png",
       countdown: {
-        date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000), // Example countdown date
+        date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000),
       },
     },
   ];

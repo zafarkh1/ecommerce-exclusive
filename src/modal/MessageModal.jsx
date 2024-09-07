@@ -4,7 +4,7 @@ import { useModalStore } from "../zustand/modalStore";
 import "./modal.css";
 import { useCallback, useEffect, useState } from "react";
 
-function MessageModal(props) {
+function MessageModal() {
   const { isOpen, closeModal } = useModalStore();
   const [isVisible, setIsVisible] = useState(false);
 

@@ -4,11 +4,11 @@ import { products as allProducts } from "../api/data";
 import { useStore } from "../zustand/store";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
-import { useTabStore } from "../zustand/tabStore"; // Import Zustand store
+import { useTabStore } from "../zustand/tabStore";
 
 function Products() {
   const [visible, setVisible] = useState(4);
-  const { activeTab } = useTabStore(); // Get active tab from store
+  const { activeTab } = useTabStore();
   const navigate = useNavigate();
   const { addToCart, toggleFavorite, favorites } = useStore();
 

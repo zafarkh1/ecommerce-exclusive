@@ -4,7 +4,6 @@ import {
   MdOutlineShoppingCart,
   MdOutlineSearch,
   MdOutlineMenu,
-  MdDeleteForever,
 } from "react-icons/md";
 import { FaTimes } from "react-icons/fa";
 import { useStore } from "../zustand/store";
@@ -14,8 +13,7 @@ import { useNavigate } from "react-router-dom";
 function Navbar(props) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { cart, favorites, removeFromCart, decreaseFromCart, addToCart } =
-    useStore();
+  const { cart, favorites } = useStore();
   const { isOpen } = useModalStore();
   const navigate = useNavigate();
 

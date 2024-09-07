@@ -1,9 +1,8 @@
-import { useTabStore } from "../zustand/tabStore"; // Import Zustand store
-import { items } from "../api/tab"; // Import categories data
+import { useTabStore } from "../zustand/tabStore";
+import { items } from "../api/tab";
 
 function Categories() {
-  const { activeTab, setActiveTab } = useTabStore(); // Use store state and function
-
+  const { activeTab, setActiveTab } = useTabStore();
   return (
     <div className="container mx-auto lg:pt-12 py-6">
       <p className="text-red-700 flex items-center gap-4 lg:text-lg">
