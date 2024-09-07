@@ -1,9 +1,27 @@
 import Countdown from "react-countdown";
+import Slider from "react-slick";
+import { useTranslation } from "react-i18next";
 
 function Sale() {
+  const { t } = useTranslation();
+
   const items = [
     {
-      title: "Enhance your music experience",
+      title: t("sale.title", "Enhance your music experience"), // Example, use specific key if needed
+      img: "/images/sale-1.png",
+      countdown: {
+        date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000),
+      },
+    },
+    {
+      title: t("sale.title", "Enhance your music experience"), // Example, use specific key if needed
+      img: "/images/sale-1.png",
+      countdown: {
+        date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000),
+      },
+    },
+    {
+      title: t("sale.title", "Enhance your music experience"), // Example, use specific key if needed
       img: "/images/sale-1.png",
       countdown: {
         date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000),
@@ -12,13 +30,12 @@ function Sale() {
   ];
 
   const fullTitles = {
-    d: "Days",
-    h: "Hours",
-    m: "Minutes",
-    s: "Seconds",
+    d: t("sale.countdown.days"),
+    h: t("sale.countdown.hours"),
+    m: t("sale.countdown.minutes"),
+    s: t("sale.countdown.seconds"),
   };
 
-  // Countdown renderer function
   const renderer = ({ days, hours, minutes, seconds }) => (
     <div className="flex flex-wrap justify-center md:justify-start space-x-4 md:my-10 my-8 text-black">
       {[
@@ -41,28 +58,42 @@ function Sale() {
     </div>
   );
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className="container mx-auto text-white lg:my-4 my-2">
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className="bg-no-repeat md:bg-right bg-bottom bg-contain lg:bg-auto bg-black lg:px-10 px-6 rounded-xl lg:py-6 py-4"
-          style={{ backgroundImage: `url(${item.img})` }}
-        >
-          <p className="lg:text-lg text-lime-500 md:text-left text-center">
-            Categories
-          </p>
-          <h1 className="xl:text-6xl xl:leading-[4rem] md:text-4xl text-2xl lg:my-8 my-4 capitalize xl:w-2/5 md:w-1/2 md:text-left text-center">
-            {item.title}
-          </h1>
-          <Countdown date={item.countdown.date} renderer={renderer} />
-          <div className="flex md:justify-stretch justify-center">
-            <button className="lg:py-2 py-1 lg:px-6 px-3 bg-lime-500 hover:bg-lime-400 text-white cursor-pointer rounded-lg">
-              Buy now
-            </button>
+    <div className="container mx-auto text-white lg:my-4 my-2 slider-container">
+      <Slider {...settings}>
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="bg-black lg:px-10 px-6 rounded-xl lg:py-6 py-4"
+          >
+            <div
+              className="bg-no-repeat md:bg-right bg-bottom bg-contain lg:bg-auto"
+              style={{ backgroundImage: `url(${item.img})` }}
+            >
+              <p className="lg:text-lg text-lime-500 md:text-left text-center">
+                {t("sale.categories")}
+              </p>
+              <h1 className="xl:text-6xl xl:leading-[4rem] md:text-4xl text-2xl lg:my-8 my-4 capitalize xl:w-2/5 md:w-1/2 md:text-left text-center">
+                {item.title}
+              </h1>
+              <Countdown date={item.countdown.date} renderer={renderer} />
+              <div className="flex md:justify-stretch justify-center">
+                <button className="lg:py-2 py-1 lg:px-6 px-3 bg-lime-500 hover:bg-lime-400 text-white cursor-pointer rounded-lg">
+                  {t("sale.buy_now")}
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </Slider>
     </div>
   );
 }

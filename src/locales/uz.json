@@ -1,0 +1,342 @@
+{
+    "navbarLng": {
+      "sale": "Barcha cho'milish kostyumlari uchun yozgi sotuv va bepul tezkor yetkazib berish - 50% chegirma!",
+      "btn": "Hoziroq xarid qiling",
+        "language_uz": "O'zbekcha",
+        "language_ru": "Ruscha",
+        "language_en": "Inglizcha",
+        "language": "Til"
+      },
+        "navbar": {
+          "home": "Bosh sahifa",
+          "contact": "Aloqa",
+          "about": "Biz haqimizda",
+          "sign_in": "Kirish",
+          "favorites": "Yoqtirganlar",
+          "cart": "Savatcha",
+          "no_liked_products": "Yoqqan mahsulotlar yo'q"
+        },
+        "showcase": {
+            "iphone_series": "Iphone seriyasi",
+            "playstation_series": "Playstation seriyasi",
+            "samsung_series": "Samsung seriyasi",
+            "watch_series": "Soatlar seriyasi",
+            "up_to_discount": "10% gacha chegirma",
+            "shop_now": "Xarid qiling"
+          },
+          "categories": {
+    "title": "Kategoriyalar",
+    "browse_by_category": "Kategoriyalar bo'yicha ko'rib chiqish"
+  },
+  "product": {
+    "our_products": "Mahsulotlarimiz",
+    "add_to_cart": "Savatga qo'shish",
+    "view_all_products": "Barcha mahsulotlarni ko'rish",
+    "view_less_products": "Kamroq mahsulotlarni ko'rish",
+    "reviews": "sharhlar"
+  },
+  "sale": {
+    "categories": "Kategoriyalar",
+    "buy_now": "Hozir xarid qiling",
+    "countdown": {
+      "days": "Kunlar",
+      "hours": "Soatlar",
+      "minutes": "Daqiqalar",
+      "seconds": "Soniyalar"
+    }
+  },
+ "services": {
+    "title": "Xizmatlar",
+    "heading": "Bizning xizmatlar",
+    "items": {
+      "delivery": {
+        "title": "BEPUL VA TEZKOR YETKAZIB BERISH",
+        "desc": "Har qanday buyurtma uchun $140 dan yuqori bepul yetkazib berish"
+      },
+      "customer_service": {
+        "title": "24/7 MUSHMIYOZ XIZMAT",
+        "desc": "Do‘stona 24/7 mijozlarga xizmat ko‘rsatish"
+      },
+      "money_back": {
+        "title": "PULNI QAYTARISH GARANTISI",
+        "desc": "30 kun ichida pulni qaytarib beramiz"
+      }
+    }
+  },
+  "arrival": {
+    "featured": "Tanlangan",
+    "heading": "Yangi kelganlar",
+    "products": {
+      "ps5": {
+        "title": "PS 5",
+        "desc": "Ajoyib grafikalar va tez yuklash vaqti bilan yangi avlod o'yin konsoli."
+      },
+      "iphone13": {
+        "title": "iPhone 13 Pro",
+        "desc": "A15 Bionic chip, Super Retina XDR displeyi va Pro kamera tizimiga ega eng so'nggi iPhone."
+      },
+      "luxury_watch": {
+        "title": "Lüks Soat",
+        "desc": "Premium dizayn va aniq vaqt ko'rsatish bilan nafis lüks soat."
+      },
+      "bluetooth_speaker": {
+        "title": "Bluetooth Dinamik",
+        "desc": "Chuqur bass va uzoq batareya umri bilan portativ Bluetooth dinamik."
+      }
+    },
+    "shop_now": "Hozir xarid qiling"
+  }, 
+  "footer": {
+    "subscribe": {
+      "title": "Eksklyuziv",
+      "subtitle": "Obuna bo‘lish",
+      "description": "Birinchi buyurtma uchun 10% chegirma oling",
+      "email_placeholder": "Emailingizni kiriting",
+      "subscribe_button": "→"
+    },
+    "support": {
+      "title": "Qo‘llab-quvvatlash",
+      "address": "111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.",
+      "email": "exclusive@gmail.com",
+      "phone": "+88015-88888-9999"
+    },
+    "account": {
+      "title": "Hisob",
+      "links": [
+        "Mening hisobim",
+        "Kirish / Ro‘yxatdan o‘tish",
+        "Savatcha",
+        "Sevimlilar",
+        "Do‘kon"
+      ]
+    },
+    "quick_links": {
+      "title": "Tezkor havolalar",
+      "links": [
+        "Maxfiylik siyosati",
+        "Foydalanish shartlari",
+        "Savollar",
+        "Aloqa"
+      ]
+    },
+    "download_app": {
+      "title": "Dastur yuklash",
+      "description": "Dastur yangi foydalanuvchilar uchun $3 tejang",
+      "play_store": "Google Play",
+      "app_store": "App Store"
+    },
+    "social_media": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "twitter": "https://twitter.com",
+      "linkedin": "https://linkedin.com"
+    },
+    "footer_bottom": "© Copyright Rimel 2022. Barcha huquqlar himoyalangan."
+  },
+   "detail": {
+"reviews": "sharhlar",
+  "buyNow": "Hozir sotib oling",
+  "freeDelivery": "Bepul yetkazib berish",
+  "enterPostalCode": "Yetkazib berish imkoniyati uchun pochta kodingizni kiriting",
+  "returnDelivery": "Qaytarish yetkazib berish",
+  "freeReturns": "30 kun ichida bepul qaytarish"
+   },
+   "series": {
+    "series": "Seriya",
+    "total": "Jami",
+    "buyNow": "Hozir sotib oling"
+   },
+   "cart": {
+    "shoppingCart": "Savat",
+    "emptyCartMessage": "Savatingiz bo'sh :(",
+    "buyNow": "Hozir xarid qilish",
+    "total": "Jami"
+  },  
+  "products": {
+    "1": {
+      "title": "Ryukzak",
+      "category": "Aksessuarlar",
+      "desc": "Sayohatlar va kundalik foydalanish uchun mo'ljallangan mustahkam va keng ryukzak."
+    },
+    "2": {
+      "title": "Naushniklar",
+      "category": "Elektronika",
+      "desc": "Simsiz shovqinni bekor qiluvchi naushniklar, tiniq ovoz va uzoq davom etadigan batareya."
+    },
+    "3": {
+      "title": "PS 5",
+      "category": "Elektronika",
+      "desc": "Kuchli grafikalar va tez yuklash vaqtlariga ega yangi avlod o'yin konsoli."
+    },
+    "4": {
+      "title": "Redmi Note 13",
+      "category": "Telefonlar",
+      "desc": "Imkoniyatlari kuchli va uzoq xizmat qiluvchi batareyaga ega bo'lgan arzon smartfon."
+    },
+    "5": {
+      "title": "Samsung S24 Ultra",
+      "category": "Telefonlar",
+      "desc": "Mukammal kamera va ilg'or displey texnologiyalariga ega yuqori darajali smartfon."
+    },
+    "6": {
+      "title": "Boss soatlar",
+      "category": "Aksessuarlar",
+      "desc": "Funktsional va moda birlashtirgan nafis va zamonaviy soatlar."
+    },
+    "7": {
+      "title": "Bluetooth karnay",
+      "category": "Elektronika",
+      "desc": "Chuquroq bas va uzoq davom etadigan batareyaga ega portativ Bluetooth karnay."
+    },
+    "8": {
+    "title": "Teridan yasangan hamyon",
+    "category": "Aksessuarlar",
+    "desc": "Ko'p bo'limli yupqa va mustahkam teridan yasangan hamyon."
+  },
+  "9": {
+    "title": "Raqamli kamera",
+    "category": "Elektronika",
+    "desc": "Yuqori aniqlik va mukammal zoom imkoniyatlariga ega bo'lgan kompakt raqamli kamera."
+  },
+  "10": {
+    "title": "Aqlli soat",
+    "category": "Elektronika",
+    "desc": "Fitness kuzatuvchi va mobil bildirishnomalar bilan to'ldirilgan funksional soat."
+  },
+  "11": {
+    "title": "Quyoshdan himoyalovchi ko'zoynaklar",
+    "category": "Aksessuarlar",
+    "desc": "UV himoyasi va qulay o'tirish bilan uslubiy ko'zoynaklar."
+  },
+  "12": {
+    "title": "Simsiz quloqchinlar",
+    "category": "Elektronika",
+    "desc": "Yuqori ovoz sifati va shovqinni izolyatsiya qilish bilan kompakt simsiz quloqchinlar."
+  },
+  "13": {
+    "title": "Safar chashkasi",
+    "category": "Aksessuarlar",
+    "desc": "Ichimliklaringizni so'nggi soatlarda issiq yoki sovuq saqlaydigan izolyatsiya qilingan safar chashkasi."
+  },
+  "14": {
+    "title": "O'yin headseti",
+    "category": "Elektronika",
+    "desc": "Atrof-muhit tovushlarini yaxshilovchi va shovqinni kamaytiruvchi mikrofon bilan yuqori samarali o'yin headseti."
+  },
+  "15": {
+    "title": "Apple iPhone 14",
+    "category": "Telefonlar",
+    "desc": "Yangi Apple smartfoni ilg'or kamera xususiyatlari va kuchli A16 chipi bilan."
+  },
+  "16": {
+    "title": "Teridan belbog'",
+    "category": "Aksessuarlar",
+    "desc": "Klassik teridan belbog', mustahkam tasmali, kundalik va rasmiy kiyimlar uchun mos."
+  },
+  "17": {
+    "title": "4K UHD Monitor",
+    "category": "Elektronika",
+    "desc": "Ultra HD monitor ajoyib tasvir va aniq rang ko'rsatkichlari bilan."
+  },
+  "18": {
+    "title": "Fitness Tracker",
+    "category": "Elektronika",
+    "desc": "Yurak urishini, qadamlarni va uyqu tartibini nazorat qiladigan taqiladigan fitness tracker."
+  },
+  "19": {
+    "title": "Lüks Soat",
+    "category": "Aksessuarlar",
+    "desc": "Yuqori sifatli dizayn va aniq vaqtni ko'rsatadigan elegant lüks soat."
+  },
+  "20": {
+    "title": "iPhone 13 Pro",
+    "category": "Telefonlar",
+    "desc": "Yangi iPhone A15 Bionic chipi, Super Retina XDR displeyi va Pro kamera tizimi bilan."
+  },
+  "21": {
+    "title": "Samsung Galaxy S21",
+    "category": "Telefonlar",
+    "desc": "Yuqori ishlash qobiliyatiga ega smartfon, dinamik AMOLED displey va kuchli Exynos 2100 protsessori bilan."
+  },
+  "22": {
+    "title": "Google Pixel 6",
+    "category": "Telefonlar",
+    "desc": "Google'ning flagman smartfoni Tensor chipi va ilg'or AI imkoniyatlari bilan."
+  },
+    "23": {
+      "title": "OnePlus 9",
+      "category": "Telefonlar",
+      "desc": "Zarba tezligi 120 Gts bo'lgan va tez zaryadlash imkoniyatiga ega bo'lgan zamonaviy va kuchli smartfon."
+    },
+    "24": {
+      "title": "Sony Xperia 5 II",
+      "category": "Telefonlar",
+      "desc": "Kompakt o'lchamdagi flagman smartfoni, OLED displey va professional darajadagi kamera xususiyatlari bilan."
+    },
+    "25": {
+      "title": "Bose QuietComfort 45",
+      "category": "Aksessuarlar",
+      "desc": "Yuqori sifatli shovqinni kamaytirish funksiyasi va ajoyib ovoz sifati va qulaylik bilan yuqori darajadagi naushniklar."
+    },
+    "26": {
+      "title": "Apple AirPods Pro",
+      "category": "Aksessuarlar",
+      "desc": "Aktiv shovqinni kamaytirish va moslashtirilgan ekvalayzer bilan simsiz naushniklar."
+    },
+    "27": {
+      "title": "Samsung Galaxy Watch 4",
+      "category": "Aksessuarlar",
+      "desc": "Fitnessni kuzatish, EKG monitoringi va sozlanadigan soat yuzalari bilan ilg'or aqlli soat."
+    },
+    "28": {
+      "title": "Smart Sovutgich",
+      "category": "Maishiy texnika",
+      "desc": "Zamonaviy aqlli sovutgich, ilg'or sovutish texnologiyasi va sensorli boshqaruv bilan."
+    },
+    "29": {
+      "title": "Robot Tozalash Mashinasi",
+      "category": "Maishiy texnika",
+      "desc": "Aqlli xaritalash va bir nechta tozalash rejimlari bilan samarali robot tozalash mashinasi."
+    },
+        "30": {
+          "title": "Havo Tozalagich",
+          "category": "Maishiy texnika",
+          "desc": "HEPA filtri va real vaqt rejimida havo sifatini kuzatish bilan yuqori samarali havo tozalagich."
+        },
+        "31": {
+          "title": "Elektr Choynak",
+          "category": "Maishiy texnika",
+          "desc": "Tez qaynatiladigan elektr choynak, zanglamas po'latdan yasalgan korpus va avtomatik o'chirish funksiyasi bilan."
+        },
+        "32": {
+          "title": "Kofe Tayyorlagich",
+          "category": "Maishiy texnika",
+          "desc": "O'rnatilgan maydalagich va sozlanadigan qahva kuchi bilan dasturlashtiriladigan kofe tayyorlagich."
+        },
+        "33": {
+          "title": "Boshqariladigan Yig'ish Mashinasi",
+          "category": "Fitnes Uskunalari",
+          "desc": "Bir nechta mashq dasturlari va yurak urishini kuzatish imkoniyati bilan yuqori samarali boshqariladigan yig'ish mashinasi."
+        },
+        "34": {
+          "title": "Tartibga Solinadigan Dumbbell",
+          "category": "Fitnes Uskunalari",
+          "desc": "Oson og'irlik tanlash va ergonomik ushlash bilan ko'p funksiyali tartibga solinadigan dumbbell."
+        },
+        "35": {
+          "title": "Velotrenajyor",
+          "category": "Fitnes Uskunalari",
+          "desc": "Tuzilgan qarshilik darajalari va o'rnatilgan mashq dasturlari bilan mustahkam velotrenajyor."
+        },
+        "36": {
+          "title": "Yoga Gilami",
+          "category": "Fitnes Uskunalari",
+          "desc": "Treninglar davomida qulaylik va qo'llab-quvvatlash uchun ortiqcha yostiqli, sirpanmaydigan yoga gilami."
+        },
+        "37": {
+          "title": "Gantellar To'plami",
+          "category": "Fitnes Uskunalari",
+          "desc": "Butun tana mashqlari uchun turli og'irliklarda to'liq gantellar to'plami."
+        }
+      }
+}

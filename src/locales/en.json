@@ -1,0 +1,342 @@
+{
+    "navbarLng": {
+      "sale": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
+      "btn": "Shop now",
+        "language_uz": "Uzbek",
+        "language_ru": "Russian",
+        "language_en": "English",
+        "language": "Language"
+      },
+        "navbar": {
+          "home": "Home",
+          "contact": "Contact",
+          "about": "About",
+          "sign_in": "Sign in",
+          "favorites": "Favorites",
+          "cart": "Cart",
+          "no_liked_products": "No liked products"
+      },
+      "showcase": {
+        "iphone_series": "Iphone series",
+        "playstation_series": "Playstation series",
+        "samsung_series": "Samsung series",
+        "watch_series": "Watch series",
+        "up_to_discount": "Up to 10% off Voucher",
+        "shop_now": "Shop now"
+      },
+      "categories": {
+        "title": "Categories",
+        "browse_by_category": "Browse by category"
+      },
+      "product": {
+        "our_products": "Our Products",
+        "add_to_cart": "Add to cart",
+        "view_all_products": "View all products",
+        "view_less_products": "View less products",
+        "reviews": "reviews"
+      },
+      "arrival": {
+    "featured": "Featured",
+    "heading": "New Arrival",
+    "products": {
+      "ps5": {
+        "title": "PS 5",
+        "desc": "Next-generation gaming console with stunning graphics and fast loading times."
+      },
+      "iphone13": {
+        "title": "iPhone 13 Pro",
+        "desc": "The latest iPhone with A15 Bionic chip, Super Retina XDR display, and Pro camera system."
+      },
+      "luxury_watch": {
+        "title": "Luxury Watch",
+        "desc": "Elegant luxury watch with a premium design and precise timekeeping."
+      },
+      "bluetooth_speaker": {
+        "title": "Bluetooth Speaker",
+        "desc": "Portable Bluetooth speaker with deep bass and long battery life."
+      }
+    },
+    "shop_now": "Shop now"
+  },
+  "sale": {
+    "categories": "Categories",
+    "buy_now": "Buy now",
+    "countdown": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    }
+  },
+      "services": {
+    "title": "Services",
+    "heading": "Our services",
+    "items": {
+      "delivery": {
+        "title": "FREE AND FAST DELIVERY",
+        "desc": "Free delivery for all orders over $140"
+      },
+      "customer_service": {
+        "title": "24/7 CUSTOMER SERVICE",
+        "desc": "Friendly 24/7 customer support"
+      },
+      "money_back": {
+        "title": "MONEY BACK GUARANTEE",
+        "desc": "We return money within 30 days"
+      }
+    }
+  },
+  "footer": {
+    "subscribe": {
+      "title": "Exclusive",
+      "subtitle": "Subscribe",
+      "description": "Get 10% off your first order",
+      "email_placeholder": "Enter your email",
+      "subscribe_button": "→"
+    },
+    "support": {
+      "title": "Support",
+      "address": "111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.",
+      "email": "exclusive@gmail.com",
+      "phone": "+88015-88888-9999"
+    },
+    "account": {
+      "title": "Account",
+      "links": [
+        "My account",
+        "Login / Register",
+        "Cart",
+        "Wishlist",
+        "Shop"
+      ]
+    },
+    "quick_links": {
+      "title": "Quick Link",
+      "links": [
+        "Privacy Policy",
+        "Terms of Use",
+        "FAQ",
+        "Contact"
+      ]
+    },
+    "download_app": {
+      "title": "Download App",
+      "description": "Save $3 with App New User Only",
+      "play_store": "Google Play",
+      "app_store": "App Store"
+    },
+    "social_media": {
+      "facebook": "https://facebook.com",
+      "instagram": "https://instagram.com",
+      "twitter": "https://twitter.com",
+      "linkedin": "https://linkedin.com"
+    },
+    "footer_bottom": "© Copyright Rimel 2022. All rights reserved."
+  },
+  "detail": {
+ "reviews": "reviews",
+  "buyNow": "Buy now",
+  "freeDelivery": "Free delivery",
+  "enterPostalCode": "Enter your postal code for Delivery Availability",
+  "returnDelivery": "Return delivery",
+  "freeReturns": "Free 30 Days Delivery Returns"
+  },
+   "series": {
+    "series": "Series",
+  "total": "Total",
+  "buyNow": "Buy now"
+   },
+   "cart": {
+    "shoppingCart": "Shopping Cart",
+  "emptyCartMessage": "Your cart is empty :(",
+  "buyNow": "Buy now",
+  "total": "Total"
+   },
+  "data": {
+    "1": {
+      "title": "Backpack",
+      "category": "Accessories",
+      "desc": "Durable and spacious backpack perfect for traveling and daily use."
+    },
+    "2": {
+      "title": "Headphones",
+      "category": "Electronics",
+      "desc": "Wireless noise-cancelling headphones with crystal clear sound and long battery life."
+    },
+    "3": {
+      "title": "PS 5",
+      "category": "Electronics",
+      "desc": "Next-generation gaming console with stunning graphics and fast loading times."
+    },
+    "4": {
+      "title": "Redmi Note 13",
+      "category": "Phones",
+      "desc": "Affordable smartphone with impressive features and a long-lasting battery."
+    },
+    "5": {
+      "title": "Samsung S24 Ultra",
+      "category": "Phones",
+      "desc": "High-end smartphone with an exceptional camera and advanced display technology."
+    },
+    "6": {
+      "title": "Boss watches",
+      "category": "Accessories",
+      "desc": "Elegant and stylish watches that combine functionality and fashion."
+    },
+    "7": {
+      "title": "Bluetooth Speaker",
+      "category": "Electronics",
+      "desc": "Portable Bluetooth speaker with deep bass and long battery life."
+    },
+    "8": {
+    "title": "Leather Wallet",
+    "category": "Accessories",
+    "desc": "Sleek and durable leather wallet with multiple compartments."
+  },
+  "9": {
+    "title": "Digital Camera",
+    "category": "Electronics",
+    "desc": "Compact digital camera with high resolution and excellent zoom capabilities."
+  },
+  "10": {
+    "title": "Smart Watch",
+    "category": "Electronics",
+    "desc": "Feature-packed smart watch with fitness tracking and mobile notifications."
+  },
+  "11": {
+    "title": "Sunglasses",
+    "category": "Accessories",
+    "desc": "Stylish sunglasses with UV protection and a comfortable fit."
+  },
+  "12": {
+    "title": "Wireless Earbuds",
+    "category": "Electronics",
+    "desc": "Compact wireless earbuds with excellent sound quality and noise isolation."
+  },
+  "13": {
+    "title": "Travel Mug",
+    "category": "Accessories",
+    "desc": "Insulated travel mug that keeps your drinks hot or cold for hours."
+  },
+  "14": {
+    "title": "Gaming Headset",
+    "category": "Electronics",
+    "desc": "High-performance gaming headset with surround sound and a noise-cancelling mic."
+  },
+  "15": {
+    "title": "Apple iPhone 14",
+    "category": "Phones",
+    "desc": "Latest Apple smartphone with advanced camera features and a powerful A16 chip."
+  },
+  "16": {
+    "title": "Leather Belt",
+    "category": "Accessories",
+    "desc": "Classic leather belt with a durable buckle, perfect for both casual and formal wear."
+  },
+  "17": {
+    "title": "4K UHD Monitor",
+    "category": "Electronics",
+    "desc": "Ultra HD monitor with stunning visuals and accurate color representation."
+  },
+  "18": {
+    "title": "Fitness Tracker",
+    "category": "Electronics",
+    "desc": "Wearable fitness tracker that monitors your heart rate, steps, and sleep patterns."
+  },
+  "19": {
+    "title": "Luxury Watch",
+    "category": "Accessories",
+    "desc": "Elegant luxury watch with a premium design and precise timekeeping."
+  },
+  "20": {
+    "title": "iPhone 13 Pro",
+    "category": "Phones",
+    "desc": "The latest iPhone with A15 Bionic chip, Super Retina XDR display, and Pro camera system."
+  },
+  "21": {
+    "title": "Samsung Galaxy S21",
+    "category": "Phones",
+    "desc": "High-performance smartphone with a dynamic AMOLED display and powerful Exynos 2100 processor."
+  },
+  "22": {
+    "title": "Google Pixel 6",
+    "category": "Phones",
+    "desc": "Google's flagship smartphone with Tensor chip and cutting-edge AI capabilities."
+  },
+    "23": {
+      "title": "OnePlus 9",
+      "category": "Phones",
+      "desc": "Sleek and powerful smartphone with 120Hz Fluid Display and fast charging capabilities."
+    },
+    "24": {
+      "title": "Sony Xperia 5 II",
+      "category": "Phones",
+      "desc": "Compact flagship smartphone with OLED display and professional-grade camera features."
+    },
+    "25": {
+      "title": "Bose QuietComfort 45",
+      "category": "Accessories",
+      "desc": "Top-of-the-line noise-cancelling headphones with exceptional sound quality and comfort."
+    },
+    "26": {
+      "title": "Apple AirPods Pro",
+      "category": "Accessories",
+      "desc": "Wireless earbuds with active noise cancellation and adaptive EQ for immersive sound."
+    },
+    "27": {
+      "title": "Samsung Galaxy Watch 4",
+      "category": "Accessories",
+      "desc": "Advanced smartwatch with fitness tracking, ECG monitoring, and customizable watch faces."
+    },
+    "28": {
+      "title": "Smart Refrigerator",
+      "category": "Home Appliances",
+      "desc": "Modern smart refrigerator with advanced cooling technology and touch-screen controls."
+    },
+    "29": {
+      "title": "Robot Vacuum Cleaner",
+      "category": "Home Appliances",
+      "desc": "Efficient robot vacuum cleaner with smart mapping and multiple cleaning modes."
+    },
+        "30": {
+          "title": "Air Purifier",
+          "category": "Home Appliances",
+          "desc": "High-efficiency air purifier with HEPA filter and real-time air quality monitoring."
+        },
+        "31": {
+          "title": "Electric Kettle",
+          "category": "Home Appliances",
+          "desc": "Quick-boiling electric kettle with stainless steel body and automatic shut-off feature."
+        },
+        "32": {
+          "title": "Coffee Maker",
+          "category": "Home Appliances",
+          "desc": "Programmable coffee maker with built-in grinder and adjustable brew strength."
+        },
+        "33": {
+          "title": "Treadmill Pro",
+          "category": "Fitness Equipment",
+          "desc": "High-performance treadmill with multiple workout programs and heart rate monitoring."
+        },
+        "34": {
+          "title": "Adjustable Dumbbells",
+          "category": "Fitness Equipment",
+          "desc": "Versatile adjustable dumbbells with easy weight selection and ergonomic grip."
+        },
+        "35": {
+          "title": "Exercise Bike",
+          "category": "Fitness Equipment",
+          "desc": "Sturdy exercise bike with adjustable resistance levels and built-in workout programs."
+        },
+        "36": {
+          "title": "Yoga Mat",
+          "category": "Fitness Equipment",
+          "desc": "Non-slip yoga mat with extra cushioning for comfort and support during workouts."
+        },
+        "37": {
+          "title": "Kettlebell Set",
+          "category": "Fitness Equipment",
+          "desc": "Complete kettlebell set with varying weights for a full-body workout."
+        }      
+  }
+}

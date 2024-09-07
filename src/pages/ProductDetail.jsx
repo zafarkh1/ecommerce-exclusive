@@ -1,19 +1,22 @@
 import { useParams } from "react-router-dom";
-import { products } from "../api/data";
+import { useProducts } from "../api/data";
 import { MdOutlineStar, MdOutlineSwapHoriz } from "react-icons/md";
 import { TbTruckDelivery } from "react-icons/tb";
 import { useStore } from "../zustand/store";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useModalStore } from "../zustand/modalStore";
 import MessageModal from "../modal/MessageModal";
+import { useTranslation } from "react-i18next";
 
 function ProductDetail(props) {
   const { id } = useParams();
-  const product = products.find((p) => p.id === parseInt(id));
+  const products = useProducts();
   const { cart, decreaseFromCart, addToCart, toggleFavorite, favorites } =
     useStore();
   const { openModal } = useModalStore();
+  const { t } = useTranslation();
 
+  const product = products.find((p) => p.id === parseInt(id));
   const isFavorited = (id) => favorites.some((item) => item.id === id);
 
   const renderStars = (rating) => {
@@ -135,10 +138,8 @@ function ProductDetail(props) {
                 <TbTruckDelivery />
               </div>
               <div>
-                <h5 className="font-medium">Free delivery</h5>
-                <p className="text-sm">
-                  Enter your postal code for Delivery Availability
-                </p>
+                <h5 className="font-medium">{t("detail.freeDelivery")}</h5>
+                <p className="text-sm">{t("detail.enterPostalCode")}</p>
               </div>
             </div>
             <div className="flex items-center gap-4 border-2 p-4 border-t-0 rounded-b-lg">
@@ -146,8 +147,8 @@ function ProductDetail(props) {
                 <MdOutlineSwapHoriz />
               </div>
               <div>
-                <h5 className="font-medium">Return delivery</h5>
-                <p className="text-sm">Free 30 Days Delivery Returns</p>
+                <h5 className="font-medium">{t("detail.returnDelivery")}</h5>
+                <p className="text-sm">{t("detail.freeReturns")}</p>
               </div>
             </div>
           </div>

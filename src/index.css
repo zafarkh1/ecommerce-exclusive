@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-slider-progress {
+  background: #ccc;
+}
+
+.my-slider-progress-bar {
+  background: greenyellow;
+  height: 2px;
+  transition: width 400ms ease;
+  width: 0;
+}

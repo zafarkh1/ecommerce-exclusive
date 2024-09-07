@@ -1,9 +1,10 @@
 import { useLocation } from "react-router-dom";
-import { products } from "../api/data";
+import { useProducts } from "../api/data";
 import { useState, useEffect } from "react";
 import { useStore } from "../zustand/store";
 import { useModalStore } from "../zustand/modalStore";
 import MessageModal from "../modal/MessageModal";
+import { useTranslation } from "react-i18next";
 
 function ProductSeries() {
   const location = useLocation();
@@ -11,6 +12,8 @@ function ProductSeries() {
   const searchKeyword = queryParams.get("search");
   const { cart, decreaseFromCart, addToCart } = useStore();
   const { openModal } = useModalStore();
+  const products = useProducts();
+  const { t } = useTranslation();
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -34,7 +37,7 @@ function ProductSeries() {
   return (
     <div className="container mx-auto md:my-[10rem] my-[8rem] overflow-hidden">
       <h2 className="lg:text-4xl text-2xl font-medium text-center lg:text-left">
-        {searchKeyword.toUpperCase()} Series
+        {searchKeyword.toUpperCase()} {t("series.series")}
       </h2>
       {/*                   Products                 */}
       <div className="my-10 grid lg:grid-cols-2 gap-y-8">
@@ -99,10 +102,10 @@ function ProductSeries() {
           className="xl:py-4 py-2 xl:px-16 px-4 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 text-white rounded"
           onClick={openModal}
         >
-          Buy now
+          {t("series.buyNow")}
         </button>
         <p className="lg:text-2xl text-xl font-medium">
-          Total: {total}
+          {t("series.total")} {":"} {total}
           {" $"}
         </p>
       </div>

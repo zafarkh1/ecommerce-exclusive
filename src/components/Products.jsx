@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { IoHeartOutline, IoHeart } from "react-icons/io5";
-import { products as allProducts } from "../api/data";
+import { useProducts } from "../api/data";
 import { useStore } from "../zustand/store";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineStar } from "react-icons/md";
 import { useTabStore } from "../zustand/tabStore";
+import { useTranslation } from "react-i18next";
 
 function Products() {
   const [visible, setVisible] = useState(4);
   const { activeTab } = useTabStore();
   const navigate = useNavigate();
   const { addToCart, toggleFavorite, favorites } = useStore();
+  const { t } = useTranslation();
+  const allProducts = useProducts();
 
   const isFavorited = (id) => favorites.some((item) => item.id === id);
 
@@ -37,7 +40,7 @@ function Products() {
     <div className="container mx-auto lg:pt-10 py-4">
       <p className="text-red-700 flex items-center gap-4 lg:text-lg">
         <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
-        <span className="font-semibold">Our Products</span>
+        <span className="font-semibold">{t("product.our_products")}</span>
       </p>
 
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 sm:gap-8 gap-6 lg:my-8 my-6">
@@ -67,29 +70,25 @@ function Products() {
                 )}
               </button>
 
-              {/* <button className="absolute top-11 right-2 bg-white rounded-full p-1 text-xl">
-                <IoEyeOutline className="  " />
-              </button> */}
-
               <div className="absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in">
                 <button
                   className="bg-black text-white w-full py-2 capitalize"
                   onClick={() => addToCart(item)}
                 >
-                  Add to cart
+                  {t("product.add_to_cart")}
                 </button>
               </div>
             </div>
 
             <div className="mt-2">
               <p className="text-lg font-medium capitalize">{item.title}</p>
-              <div className="flex items-center space-x-2 mt-1  ">
+              <div className="flex items-center space-x-2 mt-1">
                 <span className="text-lg font-semibold text-red-700">
                   {item.price}
                 </span>
                 <span className="flex">{renderStars(item.rating)}</span>
                 <span className="text-gray-500 text-sm">
-                  ({item.reviews} reviews)
+                  ({item.reviews} {t("product.reviews")})
                 </span>
               </div>
             </div>
@@ -103,7 +102,7 @@ function Products() {
             className="lg:py-2 py-1 lg:px-6 px-3 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible((prev) => prev + 4)}
           >
-            View all products
+            {t("product.view_all_products")}
           </button>
         ) : filteredProducts.length < 5 ? (
           <div></div>
@@ -112,7 +111,7 @@ function Products() {
             className="lg:py-2 py-1 lg:px-6 px-3 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible(4)}
           >
-            View less products
+            {t("product.view_less_products")}
           </button>
         )}
       </div>

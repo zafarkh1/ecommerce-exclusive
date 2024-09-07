@@ -1,15 +1,18 @@
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Arrival() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
   return (
     <div className="container mx-auto lg:pt-12 py-6 md:mb-0 mb-[15rem]">
       <p className="text-red-700 flex items-center gap-4 lg:text-lg">
         <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
-        <span className="font-semibold">Featured</span>
+        <span className="font-semibold">{t("arrival.featured")}</span>
       </p>
       <h2 className="lg:text-4xl text-2xl font-medium lg:mt-4 lg:mb-9 mt-3 mb-7 text-center lg:text-left">
-        New Arrival
+        {t("arrival.heading")}
       </h2>
 
       <div className="grid lg:grid-cols-2 lg:gap-8 gap-4 lg:my-8 text-white">
@@ -27,13 +30,14 @@ function Arrival() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
 
           <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
-            <h3 className="text-2xl font-bold">PS 5</h3>
+            <h3 className="text-2xl font-bold">
+              {t("arrival.products.ps5.title")}
+            </h3>
             <p className="md:text-base text-sm">
-              Next-generation gaming console with stunning graphics and fast
-              loading times.
+              {t("arrival.products.ps5.desc")}
             </p>
             <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
-              Shop now
+              {t("arrival.shop_now")}
             </button>
           </div>
         </div>
@@ -53,13 +57,14 @@ function Arrival() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
 
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
-              <h3 className="text-2xl font-bold">iPhone 13 Pro</h3>
+              <h3 className="text-2xl font-bold">
+                {t("arrival.products.iphone13.title")}
+              </h3>
               <p className="md:text-base text-sm">
-                The latest iPhone with A15 Bionic chip, Super Retina XDR
-                display, and Pro camera system.
+                {t("arrival.products.iphone13.desc")}
               </p>
               <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
-                Shop now
+                {t("arrival.shop_now")}
               </button>
             </div>
           </div>
@@ -79,13 +84,14 @@ function Arrival() {
               <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
 
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
-                <h3 className="text-2xl font-bold">Luxury Watch</h3>
+                <h3 className="text-2xl font-bold">
+                  {t("arrival.products.luxury_watch.title")}
+                </h3>
                 <p className="md:text-base text-sm">
-                  Elegant luxury watch with a premium design and precise
-                  timekeeping.
+                  {t("arrival.products.luxury_watch.desc")}
                 </p>
                 <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
-                  Shop now
+                  {t("arrival.shop_now")}
                 </button>
               </div>
             </div>
@@ -104,13 +110,14 @@ function Arrival() {
               <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/10 rounded-xl"></div>
 
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 md:left-3 md:transform-none space-y-3 text-center md:text-left w-full lg:px-2 px-4">
-                <h3 className="text-2xl font-bold">Bluetooth Speaker</h3>
+                <h3 className="text-2xl font-bold">
+                  {t("arrival.products.bluetooth_speaker.title")}
+                </h3>
                 <p className="md:text-base text-sm">
-                  Portable Bluetooth speaker with deep bass and long battery
-                  life.
+                  {t("arrival.products.bluetooth_speaker.desc")}
                 </p>
                 <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
-                  Shop now
+                  {t("arrival.shop_now")}
                 </button>
               </div>
             </div>

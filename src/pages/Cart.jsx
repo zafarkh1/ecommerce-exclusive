@@ -2,8 +2,10 @@ import { MdDeleteForever } from "react-icons/md";
 import MessageModal from "../modal/MessageModal";
 import { useModalStore } from "../zustand/modalStore";
 import { useStore } from "../zustand/store";
+import { useTranslation } from "react-i18next";
 
 function Cart(props) {
+  const { t } = useTranslation();
   const { cart, decreaseFromCart, addToCart, removeFromCart } = useStore();
   const { openModal } = useModalStore();
 
@@ -11,11 +13,7 @@ function Cart(props) {
     (item) => item.quantity * parseInt(item.price.slice(0, -1))
   );
 
-  let total =
-    totalArr.length &&
-    totalArr.reduce((curr, acc) => {
-      return curr + acc;
-    }, 0);
+  let total = totalArr.length && totalArr.reduce((curr, acc) => curr + acc, 0);
 
   const handleNavigate = (id) => {
     window.open(`/product/${id}`, "_blank");
@@ -24,13 +22,13 @@ function Cart(props) {
   return (
     <div className="container mx-auto md:my-[10rem] my-[8rem] overflow-hidden">
       <h2 className="lg:text-4xl text-2xl font-medium text-center lg:text-left">
-        {cart.length > 0 ? "Shopping Cart" : "Your cart is empty :("}
+        {cart.length > 0 ? t("cart.shoppingCart") : t("cart.emptyCartMessage")}
       </h2>
       <div className="my-10 grid lg:grid-cols-2 gap-y-8">
         {cart.length > 0 &&
           cart.map((product, index) => (
             <div key={index} className="flex gap-6">
-              {/*             Image                 */}
+              {/* Image */}
               <div className="w-36 h-36 flex-shrink-0">
                 <img
                   src={product.img}
@@ -41,7 +39,7 @@ function Cart(props) {
                 />
               </div>
 
-              {/*               Content               */}
+              {/* Content */}
               <div className="flex flex-col justify-between h-full">
                 <div>
                   <h5 className="lg:text-2xl text-xl font-medium">
@@ -54,12 +52,12 @@ function Cart(props) {
                 </div>
 
                 <div className="mt-auto flex items-center gap-4 ">
-                  {/*              Price             */}
+                  {/* Price */}
                   <p className="text-xl text-red-700 font-medium">
                     {product.price} {" * "}
                   </p>
 
-                  {/*              Count               */}
+                  {/* Count */}
                   <div className="flex items-center border border-gray-300 rounded w-fit">
                     <button
                       onClick={() => decreaseFromCart(product.id)}
@@ -83,7 +81,7 @@ function Cart(props) {
                     </button>
                   </div>
 
-                  {/*            Delete                   */}
+                  {/* Delete */}
                   <button
                     onClick={() => removeFromCart(product.id)}
                     className="text-red-500 hover:text-red-700 text-2xl"
@@ -95,7 +93,7 @@ function Cart(props) {
             </div>
           ))}
       </div>
-      {/*                    Total  and Buy btn         */}
+      {/* Total and Buy button */}
       {cart.length > 0 && (
         <div className="flex justify-between items-center mt-16">
           <div></div>
@@ -103,11 +101,10 @@ function Cart(props) {
             className="xl:py-4 py-2 xl:px-16 px-4 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 text-white rounded"
             onClick={openModal}
           >
-            Buy now
+            {t("cart.buyNow")}
           </button>
           <p className="lg:text-2xl text-xl font-medium">
-            Total: {total}
-            {" $"}
+            {t("cart.total")}: {total} {" $"}
           </p>
         </div>
       )}
