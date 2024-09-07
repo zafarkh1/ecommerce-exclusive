@@ -1,6 +1,6 @@
 {
     "navbarLng": {
-      "sale": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
+      "sale": "Summer Tech Sale! Refresh Your Gadget Collection with Up to 50% OFF on Selected Electronics!",
       "btn": "Shop now",
         "language_uz": "Uzbek",
         "language_ru": "Russian",
@@ -8,9 +8,9 @@
         "language": "Language"
       },
         "navbar": {
-          "home": "Home",
-          "contact": "Contact",
-          "about": "About",
+          "products": "Products",
+          "services": "Services",
+          "arrivals": "New Arrivals",
           "sign_in": "Sign in",
           "favorites": "Favorites",
           "cart": "Cart",
@@ -103,20 +103,20 @@
     "account": {
       "title": "Account",
       "links": [
-        "My account",
-        "Login / Register",
-        "Cart",
-        "Wishlist",
-        "Shop"
+        {"title": "My account", "link": "account"},
+        {"title": "Login / Register", "link": "auth"},
+        {"title": "Cart", "link": "cart"},
+        {"title": "Wishlist", "link": "wishlist"},
+        {"title": "Shop", "link": "shop"}
       ]
     },
     "quick_links": {
       "title": "Quick Link",
       "links": [
-        "Privacy Policy",
-        "Terms of Use",
-        "FAQ",
-        "Contact"
+        {"title": "Privacy Policy", "link": "policy"},
+        {"title": "Terms of Use", "link": "terms"},
+        {"title": "FAQ", "link": "faq"},
+        {"title": "Contact", "link": "contact"}
       ]
     },
     "download_app": {
@@ -152,6 +152,20 @@
   "buyNow": "Buy now",
   "total": "Total"
    },
+   "MsgModal": {
+    "heading": "Complete Your Information",
+    "text": "Please provide your details to complete the purchase. We will process your order and deliver it as soon as possible.",
+    "btn": "Buy Now",
+    "loadingBtn": "Submitting...",
+    "successMessage": "Product purchased successfully!",
+    "errorMessage": "An error occurred during the purchase. Please try again!",
+    "validation": {
+      "nameRequired": "Name is required",
+      "nameMinLength": "Name must be at least 3 characters long",
+      "nameNotNumber": "Name cannot be a number",
+      "telRequired": "Telephone number is required"
+    }
+  },
   "data": {
     "1": {
       "title": "Backpack",

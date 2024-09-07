@@ -1,7 +1,8 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Footer(props) {
   const { t } = useTranslation();
@@ -12,7 +13,7 @@ function Footer(props) {
         {/* Subscribe Section */}
         <div className="col-span-1 md:col-span-1">
           <h4 className="lg:text-3xl text-xl font-semibold tracking-widest">
-            <a href="/">{t("footer.subscribe.title")}</a>
+            <RouterLink to="/">{t("footer.subscribe.title")}</RouterLink>
           </h4>
           <p className="mt-4 sm:text-base text-sm">
             {t("footer.subscribe.subtitle")}
@@ -49,15 +50,23 @@ function Footer(props) {
           <h3 className="font-semibold text-lg">{t("footer.account.title")}</h3>
           <ul className="mt-4 space-y-2">
             {t("footer.account.links", { returnObjects: true }).map(
-              (link, index) => (
+              (item, index) => (
                 <li key={index}>
-                  <a href="/" className="relative group">
-                    {link}
+                  <Link
+                    className="relative group"
+                    to={item.link}
+                    spy={true}
+                    smooth={true}
+                    // offset={-navbarHeight}
+                    duration={1500}
+                    href={item.link}
+                  >
+                    {item.title}
                     <span
                       className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
                     group-hover:scale-x-90 transition-transform duration-500 ease-linear rounded-full"
                     ></span>
-                  </a>
+                  </Link>
                 </li>
               )
             )}
@@ -71,15 +80,23 @@ function Footer(props) {
           </h3>
           <ul className="mt-4 space-y-2">
             {t("footer.quick_links.links", { returnObjects: true }).map(
-              (link, index) => (
+              (item, index) => (
                 <li key={index}>
-                  <a href="/" className="relative group">
-                    {link}
+                  <Link
+                    className="relative group"
+                    to={item.link}
+                    spy={true}
+                    smooth={true}
+                    // offset={-navbarHeight}
+                    duration={1500}
+                    href={item.link}
+                  >
+                    {item.title}
                     <span
                       className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
                     group-hover:scale-x-90 transition-transform duration-500 ease-linear rounded-full"
                     ></span>
-                  </a>
+                  </Link>
                 </li>
               )
             )}
@@ -107,16 +124,32 @@ function Footer(props) {
             />
           </div>
           <div className="mt-4 flex gap-4 text-white text-xl">
-            <a href={t("footer.social_media.facebook")}>
+            <a
+              href={t("footer.social_media.facebook")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
-            <a href={t("footer.social_media.instagram")}>
+            <a
+              href={t("footer.social_media.instagram")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a href={t("footer.social_media.twitter")}>
+            <a
+              href={t("footer.social_media.twitter")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <CiTwitter />
             </a>
-            <a href={t("footer.social_media.linkedin")}>
+            <a
+              href={t("footer.social_media.linkedin")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn />
             </a>
           </div>

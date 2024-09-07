@@ -67,7 +67,10 @@ function Sale() {
   };
 
   return (
-    <div className="container mx-auto text-white lg:my-4 my-2 slider-container">
+    <div
+      id="sale"
+      className="container mx-auto text-white lg:my-4 my-2 slider-container"
+    >
       <Slider {...settings}>
         {items.map((item, index) => (
           <div

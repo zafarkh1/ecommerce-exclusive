@@ -1,10 +1,13 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
 function NavbarLng(props) {
   const dropdownRef = useRef(null);
   const [showDropdown, setShowDropdown] = useState(false);
   const { t, i18n } = useTranslation();
+
+  const navbarHeight = 140;
 
   const languages = {
     uz: t("navbarLng.language_uz"),
@@ -13,7 +16,6 @@ function NavbarLng(props) {
   };
 
   const handleLanguageChange = (lang) => {
-    console.log(`Changing language to ${lang}`);
     i18n.changeLanguage(lang);
     setShowDropdown(false);
   };
@@ -24,9 +26,17 @@ function NavbarLng(props) {
         <div className="hidden md:block"></div>
         <div className="flex gap-4">
           <p className="hidden md:block">{t("navbarLng.sale")}</p>
-          <button className="underline underline-offset-2">
+          <Link
+            className="underline underline-offset-2"
+            to="sale"
+            spy={true}
+            smooth={true}
+            offset={-navbarHeight}
+            duration={1500}
+            href="sale"
+          >
             {t("navbarLng.btn")}
-          </button>
+          </Link>
         </div>
         <div
           ref={dropdownRef}

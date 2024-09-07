@@ -5,7 +5,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { useStore } from "../zustand/store";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useModalStore } from "../zustand/modalStore";
-import MessageModal from "../modal/MessageModal";
+import MessageModal from "../utils/MessageModal";
 import { useTranslation } from "react-i18next";
 
 function ProductDetail(props) {
@@ -114,7 +114,7 @@ function ProductDetail(props) {
                    duration-300 text-white rounded"
                 onClick={openModal}
               >
-                Buy now
+                {t("detail.buyNow")}
               </button>
             </div>
 

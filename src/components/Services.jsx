@@ -22,7 +22,7 @@ function Services() {
   const { t } = useTranslation();
 
   return (
-    <div className="container mx-auto lg:mb-16 mb-12">
+    <div id="services" className="container mx-auto lg:mb-16 mb-12">
       <p className="text-red-700 flex items-center gap-4 lg:text-lg">
         <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">{t("services.title")}</span>

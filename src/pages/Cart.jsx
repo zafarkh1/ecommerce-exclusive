@@ -1,5 +1,5 @@
 import { MdDeleteForever } from "react-icons/md";
-import MessageModal from "../modal/MessageModal";
+import MessageModal from "../utils/MessageModal";
 import { useModalStore } from "../zustand/modalStore";
 import { useStore } from "../zustand/store";
 import { useTranslation } from "react-i18next";

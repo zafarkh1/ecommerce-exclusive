@@ -6,7 +6,10 @@ function Arrival() {
   const { t } = useTranslation();
 
   return (
-    <div className="container mx-auto lg:pt-12 py-6 md:mb-0 mb-[15rem]">
+    <div
+      id="arrivals"
+      className="container mx-auto lg:pt-12 py-6 md:mb-0 mb-[15rem]"
+    >
       <p className="text-red-700 flex items-center gap-4 lg:text-lg">
         <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">{t("arrival.featured")}</span>

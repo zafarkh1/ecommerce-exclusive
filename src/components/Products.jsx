@@ -37,7 +37,7 @@ function Products() {
       : allProducts.filter((product) => product.category === activeTab);
 
   return (
-    <div className="container mx-auto lg:pt-10 py-4">
+    <div id="products" className="container mx-auto lg:pt-10 py-4">
       <p className="text-red-700 flex items-center gap-4 lg:text-lg">
         <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">{t("product.our_products")}</span>

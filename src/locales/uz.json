@@ -1,6 +1,6 @@
 {
     "navbarLng": {
-      "sale": "Barcha cho'milish kostyumlari uchun yozgi sotuv va bepul tezkor yetkazib berish - 50% chegirma!",
+      "sale": "Yozgi texnika sotuvi! Tanlangan elektronika uchun 50% gacha chegirma bilan gadjetlar kollektsiyangizni yangilang!",
       "btn": "Hoziroq xarid qiling",
         "language_uz": "O'zbekcha",
         "language_ru": "Ruscha",
@@ -8,9 +8,9 @@
         "language": "Til"
       },
         "navbar": {
-          "home": "Bosh sahifa",
-          "contact": "Aloqa",
-          "about": "Biz haqimizda",
+          "products": "Mahsulotlar",
+          "services": "Xizmatlar",
+          "arrivals": "Yangi kelganlar",
           "sign_in": "Kirish",
           "favorites": "Yoqtirganlar",
           "cart": "Savatcha",
@@ -151,8 +151,22 @@
     "emptyCartMessage": "Savatingiz bo'sh :(",
     "buyNow": "Hozir xarid qilish",
     "total": "Jami"
-  },  
-  "products": {
+  },
+  "MsgModal": {
+    "heading": "Ma'lumotlaringizni to'ldiring",
+    "text": "Xaridni yakunlash uchun ma'lumotlaringizni kiriting. Buyurtmangizni qayta ishlaymiz va imkon qadar tezroq yetkazib beramiz.",
+    "btn": "Hoziroq xarid qiling",
+    "loadingBtn": "Buyurtma rasmiylashtirilmoqda...",
+    "successMessage": "Mahsulot muvaffaqiyatli xarid qilindi!",
+    "errorMessage": "Xarid qilishda xatolik yuz berdi. Iltimos, qayta urinib ko‘ring!",
+    "validation": {
+      "nameRequired": "Ism majburiy",
+      "nameMinLength": "Ism kamida 3 ta belgidan iborat bo'lishi kerak",
+      "nameNotNumber": "Ism raqam bo'lishi mumkin emas",
+      "telRequired": "Telefon raqami talab qilinadi"
+    }
+  },
+  "data": {
     "1": {
       "title": "Ryukzak",
       "category": "Aksessuarlar",

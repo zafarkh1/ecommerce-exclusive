@@ -3,7 +3,7 @@ import { useProducts } from "../api/data";
 import { useState, useEffect } from "react";
 import { useStore } from "../zustand/store";
 import { useModalStore } from "../zustand/modalStore";
-import MessageModal from "../modal/MessageModal";
+import MessageModal from "../utils/MessageModal";
 import { useTranslation } from "react-i18next";
 
 function ProductSeries() {

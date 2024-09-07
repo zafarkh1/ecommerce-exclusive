@@ -10,7 +10,8 @@ import { FaTimes } from "react-icons/fa";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useStore } from "../zustand/store";
 import { useModalStore } from "../zustand/modalStore";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Navbar(props) {
   const { t } = useTranslation();
@@ -21,13 +22,14 @@ function Navbar(props) {
   const navigate = useNavigate();
 
   const Linkitems = [
-    { title: t("navbar.home"), link: "/" },
-    { title: t("navbar.contact"), link: "/contact" },
-    { title: t("navbar.about"), link: "/about" },
+    { title: t("navbar.products"), link: "products" },
+    { title: t("navbar.arrivals"), link: "arrivals" },
+    { title: t("navbar.services"), link: "services" },
     { title: t("navbar.sign_in"), link: "/signin" },
   ];
 
   const isFavorited = (id) => favorites.some((item) => item.id === id);
+  const navbarHeight = 140;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +61,7 @@ function Navbar(props) {
 
         <div>
           <h4 className="lg:text-3xl text-xl font-semibold tracking-widest">
-            <a href="/">Exclusive</a>
+            <RouterLink to="/">Exclusive</RouterLink>
           </h4>
         </div>
 
@@ -78,10 +80,21 @@ function Navbar(props) {
           </li>
           {Linkitems.map((item, index) => (
             <li key={index}>
-              <a href={item.link} className="relative group">
+              <Link
+                className="relative group"
+                to={item.link}
+                spy={true}
+                smooth={true}
+                offset={-navbarHeight}
+                duration={1500}
+                href={item.link}
+              >
                 {item.title}
-                <span className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-90 transition-transform duration-500 ease-linear rounded-full"></span>
-              </a>
+                <span
+                  className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-90 
+                transition-transform duration-500 ease-linear rounded-full"
+                ></span>
+              </Link>
             </li>
           ))}
         </ul>
