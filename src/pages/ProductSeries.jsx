@@ -22,7 +22,7 @@ function ProductSeries() {
       product.title.toLowerCase().includes(searchKeyword.toLowerCase())
     );
     setFilteredProducts(filtered);
-  }, [searchKeyword]);
+  }, [searchKeyword, products]);
 
   let totalArr = cart.map(
     (item) => item.quantity * parseInt(item.price.slice(0, -1))
