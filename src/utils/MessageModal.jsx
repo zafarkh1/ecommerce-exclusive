@@ -23,7 +23,7 @@ function MessageModal({ price }) {
     setIsVisible(false);
     setTimeout(() => {
       closeModal();
-    }, 4000); // Close the modal after 1 second
+    }, 1000); // Close the modal after 1 second
   }, [closeModal]);
 
   const validateName = () => {
@@ -61,12 +61,18 @@ function MessageModal({ price }) {
     if (isNameValid && isTelValid) {
       try {
         await sendMessage({ name, tel }); // Pass name and tel to sendMessage
+
+        // Display the toast message immediately
         toast.success(t("MsgModal.successMessage"));
+
+        // Close the modal after 1 second
+        setTimeout(() => {
+          handleClose(); // This will call handleClose and close the modal
+        }, 2000);
+
+        // Clear inputs immediately or after modal is closed, depending on your preference
         setName(""); // Clear name input
         setTel(""); // Clear phone input
-        setTimeout(() => {
-          handleClose(); // Close the modal after a short delay
-        }, 1000); // Adjust this delay if needed
       } catch (err) {
         toast.error(t("MsgModal.errorMessage"));
       }
@@ -79,6 +85,8 @@ function MessageModal({ price }) {
       setIsVisible(true);
     } else {
       document.body.style.overflow = "";
+      setNameError("");
+      setTelError("");
     }
 
     return () => {
@@ -120,7 +128,7 @@ function MessageModal({ price }) {
                 className="lg:px-4 lg:py-4 px-2 py-2 w-full rounded-md outline-none border-gray-200 border"
               />
               {nameError && (
-                <p className="text-secondary text-sm mt-2">{nameError}</p>
+                <p className="text-secondary text-sm">{nameError}</p>
               )}
             </div>
 
@@ -129,7 +137,7 @@ function MessageModal({ price }) {
                 country={"uz"}
                 value={tel}
                 onChange={(phone) => setTel(phone)}
-                inputProps={{ id: "tel", required: true, autoFocus: true }}
+                inputProps={{ id: "tel", required: true }}
                 containerStyle={{ width: "100%" }}
                 inputStyle={{
                   width: "100%",
@@ -139,9 +147,7 @@ function MessageModal({ price }) {
                 containerClass="input-container"
                 inputClass="input"
               />
-              {telError && (
-                <p className="text-secondary text-xl mt-0">{telError}</p>
-              )}
+              {telError && <p className="text-secondary text-sm">{telError}</p>}
             </div>
 
             <button
@@ -162,7 +168,7 @@ function MessageModal({ price }) {
 
       <ToastContainer
         position="top-right"
-        autoClose={4000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

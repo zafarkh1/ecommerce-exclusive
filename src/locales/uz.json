@@ -36,6 +36,7 @@
     "reviews": "sharhlar"
   },
   "sale": {
+    "title": "Musiqa tajribangizni yaxshilang",
     "categories": "Kategoriyalar",
     "buy_now": "Hozir xarid qiling",
     "countdown": {
@@ -88,7 +89,6 @@
   }, 
   "footer": {
     "subscribe": {
-      "title": "Eksklyuziv",
       "subtitle": "Obuna bo‘lish",
       "description": "Birinchi buyurtma uchun 10% chegirma oling",
       "email_placeholder": "Emailingizni kiriting",

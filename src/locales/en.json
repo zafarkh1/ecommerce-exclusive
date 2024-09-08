@@ -1,5 +1,5 @@
 {
-    "navbarLng": {
+   "navbarLng": {
       "sale": "Summer Tech Sale! Refresh Your Gadget Collection with Up to 50% OFF on Selected Electronics!",
       "btn": "Shop now",
         "language_uz": "Uzbek",
@@ -7,7 +7,7 @@
         "language_en": "English",
         "language": "Language"
       },
-        "navbar": {
+   "navbar": {
           "products": "Products",
           "services": "Services",
           "arrivals": "New Arrivals",
@@ -16,7 +16,7 @@
           "cart": "Cart",
           "no_liked_products": "No liked products"
       },
-      "showcase": {
+  "showcase": {
         "iphone_series": "Iphone series",
         "playstation_series": "Playstation series",
         "samsung_series": "Samsung series",
@@ -24,18 +24,18 @@
         "up_to_discount": "Up to 10% off Voucher",
         "shop_now": "Shop now"
       },
-      "categories": {
+  "categories": {
         "title": "Categories",
         "browse_by_category": "Browse by category"
       },
-      "product": {
+  "product": {
         "our_products": "Our Products",
         "add_to_cart": "Add to cart",
         "view_all_products": "View all products",
         "view_less_products": "View less products",
         "reviews": "reviews"
       },
-      "arrival": {
+  "arrival": {
     "featured": "Featured",
     "heading": "New Arrival",
     "products": {
@@ -60,6 +60,7 @@
   },
   "sale": {
     "categories": "Categories",
+    "title": "Enhance your music experience",
     "buy_now": "Buy now",
     "countdown": {
       "days": "Days",
@@ -68,7 +69,7 @@
       "seconds": "Seconds"
     }
   },
-      "services": {
+  "services": {
     "title": "Services",
     "heading": "Our services",
     "items": {
@@ -88,7 +89,6 @@
   },
   "footer": {
     "subscribe": {
-      "title": "Exclusive",
       "subtitle": "Subscribe",
       "description": "Get 10% off your first order",
       "email_placeholder": "Enter your email",

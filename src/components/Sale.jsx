@@ -9,7 +9,7 @@ function Sale() {
 
   const items = [
     {
-      title: t("sale.title", "Enhance your music experience"), // Example, use specific key if needed
+      title: t("sale.title"),
       img: "/images/sale-1.png",
       countdown: {
         date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000),
@@ -60,7 +60,7 @@ function Sale() {
             <p className="lg:text-lg text-lime-500 md:text-left text-center">
               {t("sale.categories")}
             </p>
-            <h1 className="xl:text-6xl xl:leading-[4rem] md:text-4xl text-2xl lg:my-8 my-4 capitalize xl:w-2/5 md:w-1/2 md:text-left text-center">
+            <h1 className="xl:text-5xl xl:leading-[4rem] md:text-4xl text-2xl lg:my-8 my-4 capitalize xl:w-1/2 md:w-4/5 md:text-left text-center">
               {item.title}
             </h1>
             <Countdown date={item.countdown.date} renderer={renderer} />

@@ -27,7 +27,7 @@ function NavbarLng(props) {
         <div className="flex gap-4">
           <p className="hidden md:block">{t("navbarLng.sale")}</p>
           <Link
-            className="underline underline-offset-2 hover:text-secondary transition-all duration-300"
+            className="underline underline-offset-2 lg:hover:text-secondary transition-all duration-300"
             to="sale"
             spy={true}
             smooth={true}

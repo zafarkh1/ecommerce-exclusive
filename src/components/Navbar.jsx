@@ -92,7 +92,7 @@ function Navbar(props) {
               >
                 {item.title}
                 <span
-                  className="absolute -bottom-2 -left-2 -right-2 h-1 bg-secondary transform scale-x-0 group-hover:scale-x-90 
+                  className="absolute -bottom-2 -left-2 -right-2 h-1 lg:bg-secondary transform scale-x-0 group-hover:scale-x-90 
                 transition-transform duration-500 ease-linear rounded-full"
                 ></span>
               </Link>
