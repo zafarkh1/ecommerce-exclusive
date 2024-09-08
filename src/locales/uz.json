@@ -103,20 +103,20 @@
     "account": {
       "title": "Hisob",
       "links": [
-        "Mening hisobim",
-        "Kirish / Ro‘yxatdan o‘tish",
-        "Savatcha",
-        "Sevimlilar",
-        "Do‘kon"
+        {"title": "Mening hisobim", "link": "account"},
+        {"title": "Kirish / Ro‘yxatdan o‘tish", "link": "auth"},
+        {"title": "Savatcha", "link": "cart"},
+        {"title": "Sevimlilar", "link": "wishlist"},
+        {"title": "Do‘kon", "link": "shop"}
       ]
     },
     "quick_links": {
       "title": "Tezkor havolalar",
       "links": [
-        "Maxfiylik siyosati",
-        "Foydalanish shartlari",
-        "Savollar",
-        "Aloqa"
+        {"title": "Maxfiylik siyosati", "link": "policy"},
+        {"title": "Foydalanish shartlari", "link": "terms"},
+        {"title": "Savollar", "link": "faq"},
+        {"title": "Aloqa", "link": "contact"}
       ]
     },
     "download_app": {
@@ -165,6 +165,14 @@
       "nameNotNumber": "Ism raqam bo'lishi mumkin emas",
       "telRequired": "Telefon raqami talab qilinadi"
     }
+  },
+  "tabs": {
+  "all": "All",
+  "electronics": "Elektronika",
+  "phones": "Telefonlar",
+  "fitness": "Fitnes Uskunalari",
+  "accessories": "Aksessuarlar",
+  "appliances": "Maishiy texnika"
   },
   "data": {
     "1": {

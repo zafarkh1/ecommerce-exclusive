@@ -7,7 +7,7 @@ import uzTranslation from "./locales/uz.json";
 import ruTranslation from "./locales/ru.json";
 import enTranslation from "./locales/en.json";
 
-const lang = localStorage.getItem("i18nextLng") || "uz";
+const lang = localStorage.getItem("i18nextLng") || "en";
 
 i18n
   .use(Backend)

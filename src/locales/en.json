@@ -166,6 +166,14 @@
       "telRequired": "Telephone number is required"
     }
   },
+  "tabs": {
+  "all": "All",
+  "electronics": "Electronics",
+  "phones": "Phones",
+  "fitness": "Fitness Equipment",
+  "accessories": "Accessories",
+  "appliances": "Home Appliances"
+  },
   "data": {
     "1": {
       "title": "Backpack",

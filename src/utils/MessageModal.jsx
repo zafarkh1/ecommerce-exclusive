@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import CSS for react-toastify
 
-function MessageModal() {
+function MessageModal({ price }) {
   const { isOpen, closeModal } = useModalStore();
   const [isVisible, setIsVisible] = useState(false);
   const { sendMessage, loading } = Message();
@@ -100,7 +100,7 @@ function MessageModal() {
           onClick={handleClose}
         ></div>
 
-        <div className="relative bg-white lg:w-1/3 md:w-2/3 w-[90%] lg:px-10 sm:py-10 py-8 px-8 rounded-lg shadow-lg z-10 transform transition-transform duration-300">
+        <div className="relative bg-white lg:w-1/3 md:w-2/3 w-[90%] lg:px-10 sm:pt-10 sm:pb-6 pt-8 pb-4 px-8 rounded-lg shadow-lg z-10 transform transition-transform duration-300">
           <h3 className="lg:text-2xl text-xl font-medium text-center">
             {t("MsgModal.heading")}
           </h3>
@@ -151,6 +151,12 @@ function MessageModal() {
               {loading ? t("MsgModal.loadingBtn") : t("MsgModal.btn")}
             </button>
           </form>
+          {price && (
+            <h5 className="lg:text-xl font-medium text-right mt-4">
+              {t("cart.total")}
+              {`: ${price} $`}
+            </h5>
+          )}
         </div>
       </div>
 

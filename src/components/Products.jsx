@@ -30,11 +30,13 @@ function Products() {
     return stars;
   };
 
-  // Filter products based on active tab
+  // Filter products based on raw active tab
   const filteredProducts =
-    activeTab === "All"
+    activeTab === "all"
       ? allProducts
-      : allProducts.filter((product) => product.category === activeTab);
+      : allProducts.filter(
+          (product) => product.category.toLowerCase() === activeTab
+        );
 
   return (
     <div id="products" className="container mx-auto lg:pt-10 py-4">
@@ -54,7 +56,7 @@ function Products() {
                   navigate(`/product/${item.id}`);
                   window.scrollTo(0, 0);
                 }}
-                className="object-cover w-full h-[18rem] sm:h-[15rem] md:h-[12rem] lg:h-[14rem] 
+                className="object-cover w-full h-[18rem] sm:h-[15rem] md:h-[12rem] lg:h-[14rem]
                 transition-transform transform duration-300 hover:scale-105"
               />
 

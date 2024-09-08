@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   MdPhoneAndroid,
   MdComputer,
@@ -7,11 +8,15 @@ import {
   MdOutlineClearAll,
 } from "react-icons/md";
 
-export const items = [
-  { title: "All", icon: <MdOutlineClearAll /> },
-  { title: "Electronics", icon: <MdComputer /> },
-  { title: "Phones", icon: <MdPhoneAndroid /> },
-  { title: "Fitness Equipment", icon: <MdOutlineFitnessCenter /> },
-  { title: "Accessories", icon: <MdWatch /> },
-  { title: "Home Appliances", icon: <MdCoffeeMaker /> },
-];
+export const useTabs = () => {
+  const { t } = useTranslation();
+
+  return [
+    { title: t("tabs.all"), icon: <MdOutlineClearAll /> },
+    { title: t("tabs.electronics"), icon: <MdComputer /> },
+    { title: t("tabs.phones"), icon: <MdPhoneAndroid /> },
+    { title: t("tabs.fitness"), icon: <MdOutlineFitnessCenter /> },
+    { title: t("tabs.accessories"), icon: <MdWatch /> },
+    { title: t("tabs.appliances"), icon: <MdCoffeeMaker /> },
+  ];
+};

@@ -1,25 +1,13 @@
 import Countdown from "react-countdown";
-import Slider from "react-slick";
 import { useTranslation } from "react-i18next";
+import MessageModal from "../utils/MessageModal";
+import { useModalStore } from "../zustand/modalStore";
 
 function Sale() {
   const { t } = useTranslation();
+  const { openModal } = useModalStore();
 
   const items = [
-    {
-      title: t("sale.title", "Enhance your music experience"), // Example, use specific key if needed
-      img: "/images/sale-1.png",
-      countdown: {
-        date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000),
-      },
-    },
-    {
-      title: t("sale.title", "Enhance your music experience"), // Example, use specific key if needed
-      img: "/images/sale-1.png",
-      countdown: {
-        date: new Date(Date.now() + 23 * 24 * 60 * 60 * 1000),
-      },
-    },
     {
       title: t("sale.title", "Enhance your music experience"), // Example, use specific key if needed
       img: "/images/sale-1.png",
@@ -58,45 +46,36 @@ function Sale() {
     </div>
   );
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
-    <div
-      id="sale"
-      className="container mx-auto text-white lg:my-4 my-2 slider-container"
-    >
-      <Slider {...settings}>
-        {items.map((item, index) => (
+    <div id="sale" className="container mx-auto  lg:my-4 my-2 slider-container">
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className="bg-black text-white lg:px-10 px-6 rounded-xl lg:py-6 py-4"
+        >
           <div
-            key={index}
-            className="bg-black lg:px-10 px-6 rounded-xl lg:py-6 py-4"
+            className="bg-no-repeat md:bg-right bg-bottom bg-contain lg:bg-auto"
+            style={{ backgroundImage: `url(${item.img})` }}
           >
-            <div
-              className="bg-no-repeat md:bg-right bg-bottom bg-contain lg:bg-auto"
-              style={{ backgroundImage: `url(${item.img})` }}
-            >
-              <p className="lg:text-lg text-lime-500 md:text-left text-center">
-                {t("sale.categories")}
-              </p>
-              <h1 className="xl:text-6xl xl:leading-[4rem] md:text-4xl text-2xl lg:my-8 my-4 capitalize xl:w-2/5 md:w-1/2 md:text-left text-center">
-                {item.title}
-              </h1>
-              <Countdown date={item.countdown.date} renderer={renderer} />
-              <div className="flex md:justify-stretch justify-center">
-                <button className="lg:py-2 py-1 lg:px-6 px-3 bg-lime-500 hover:bg-lime-400 text-white cursor-pointer rounded-lg">
-                  {t("sale.buy_now")}
-                </button>
-              </div>
+            <p className="lg:text-lg text-lime-500 md:text-left text-center">
+              {t("sale.categories")}
+            </p>
+            <h1 className="xl:text-6xl xl:leading-[4rem] md:text-4xl text-2xl lg:my-8 my-4 capitalize xl:w-2/5 md:w-1/2 md:text-left text-center">
+              {item.title}
+            </h1>
+            <Countdown date={item.countdown.date} renderer={renderer} />
+            <div className="flex md:justify-stretch justify-center">
+              <button
+                className="lg:py-2 py-1 lg:px-6 px-3 bg-lime-500 hover:bg-lime-400 text-white cursor-pointer rounded-lg"
+                onClick={openModal}
+              >
+                {t("sale.buy_now")}
+              </button>
             </div>
           </div>
-        ))}
-      </Slider>
+        </div>
+      ))}
+      <MessageModal />
     </div>
   );
 }

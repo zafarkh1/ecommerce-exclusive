@@ -108,7 +108,7 @@ function Cart(props) {
           </p>
         </div>
       )}
-      <MessageModal />
+      <MessageModal price={total} />
     </div>
   );
 }

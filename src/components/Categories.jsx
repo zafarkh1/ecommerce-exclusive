@@ -1,11 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useTabStore } from "../zustand/tabStore";
-import { items } from "../api/tab";
+import { useTabs } from "../api/tab";
 
 function Categories() {
   const { t } = useTranslation();
   const { activeTab, setActiveTab } = useTabStore();
+  const items = useTabs();
+
+  console.log(activeTab);
+  // Use the raw activeTab to match with item.title
+  const isActive = (tab) => activeTab === tab;
 
   return (
     <div className="container mx-auto lg:pt-12 py-6">
@@ -21,8 +26,12 @@ function Categories() {
           <div
             key={index}
             className={`lg:py-6 py-2 border-2 flex flex-col items-center justify-evenly lg:gap-3 gap-2 rounded-lg cursor-pointer
-              ${activeTab === item.title ? "bg-rose-700 text-white" : ""}`}
-            onClick={() => setActiveTab(item.title)}
+              ${
+                isActive(item.title.toLowerCase())
+                  ? "bg-rose-700 text-white"
+                  : ""
+              }`}
+            onClick={() => setActiveTab(item.title.toLowerCase())}
           >
             <p className="lg:text-4xl">{item.icon}</p>
             <p className="text-sm lg:text-base text-center">{item.title}</p>
