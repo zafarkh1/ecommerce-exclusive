@@ -10,8 +10,8 @@ function Arrival() {
       id="arrivals"
       className="container mx-auto lg:pt-12 py-6 md:mb-0 mb-[15rem]"
     >
-      <p className="text-red-700 flex items-center gap-4 lg:text-lg">
-        <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
+      <p className="text-secondary flex items-center gap-4 lg:text-lg">
+        <span className="bg-secondary h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">{t("arrival.featured")}</span>
       </p>
       <h2 className="lg:text-4xl text-2xl font-medium lg:mt-4 lg:mb-9 mt-3 mb-7 text-center lg:text-left">
@@ -39,7 +39,7 @@ function Arrival() {
             <p className="md:text-base text-sm">
               {t("arrival.products.ps5.desc")}
             </p>
-            <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
+            <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
               {t("arrival.shop_now")}
             </button>
           </div>
@@ -66,7 +66,7 @@ function Arrival() {
               <p className="md:text-base text-sm">
                 {t("arrival.products.iphone13.desc")}
               </p>
-              <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
+              <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
                 {t("arrival.shop_now")}
               </button>
             </div>
@@ -93,7 +93,7 @@ function Arrival() {
                 <p className="md:text-base text-sm">
                   {t("arrival.products.luxury_watch.desc")}
                 </p>
-                <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
+                <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
                   {t("arrival.shop_now")}
                 </button>
               </div>
@@ -119,7 +119,7 @@ function Arrival() {
                 <p className="md:text-base text-sm">
                   {t("arrival.products.bluetooth_speaker.desc")}
                 </p>
-                <button className="underline underline-offset-4 hover:text-red-500 transition-colors duration-300">
+                <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
                   {t("arrival.shop_now")}
                 </button>
               </div>

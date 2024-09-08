@@ -40,8 +40,8 @@ function Products() {
 
   return (
     <div id="products" className="container mx-auto lg:pt-10 py-4">
-      <p className="text-red-700 flex items-center gap-4 lg:text-lg">
-        <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
+      <p className="text-secondary flex items-center gap-4 lg:text-lg">
+        <span className="bg-secondary h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">{t("product.our_products")}</span>
       </p>
 
@@ -66,7 +66,7 @@ function Products() {
                 className="absolute top-2 right-2 rounded-full p-1 text-xl bg-white"
               >
                 {isFavorited(item.id) ? (
-                  <IoHeart className="text-red-500" />
+                  <IoHeart className="text-secondary" />
                 ) : (
                   <IoHeartOutline />
                 )}
@@ -85,7 +85,7 @@ function Products() {
             <div className="mt-2">
               <p className="text-lg font-medium capitalize">{item.title}</p>
               <div className="flex items-center space-x-2 mt-1">
-                <span className="text-lg font-semibold text-red-700">
+                <span className="text-lg font-semibold text-secondary">
                   {item.price}
                 </span>
                 <span className="flex">{renderStars(item.rating)}</span>
@@ -101,7 +101,7 @@ function Products() {
       <div className="flex justify-center items-center lg:my-12 my-6">
         {visible < filteredProducts.length ? (
           <button
-            className="lg:py-2 py-1 lg:px-6 px-3 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
+            className="lg:py-2 py-1 lg:px-6 px-3 bg-secondary hover:bg-hoverSecondary transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible((prev) => prev + 4)}
           >
             {t("product.view_all_products")}
@@ -110,7 +110,7 @@ function Products() {
           <div></div>
         ) : (
           <button
-            className="lg:py-2 py-1 lg:px-6 px-3 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
+            className="lg:py-2 py-1 lg:px-6 px-3 bg-secondary hover:bg-hoverSecondary  transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible(4)}
           >
             {t("product.view_less_products")}

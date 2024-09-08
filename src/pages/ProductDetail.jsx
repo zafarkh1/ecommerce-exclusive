@@ -70,7 +70,7 @@ function ProductDetail(props) {
               ({product.reviews} reviews)
             </span>
           </div>
-          <p className="lg:text-3xl text-2xl font-semibold text-red-700 md:text-left text-center">
+          <p className="lg:text-3xl text-2xl font-semibold text-secondary md:text-left text-center">
             {cart.find((c) => c.id === product.id)
               ? cart.find((c) => c.id === product.id).quantity *
                   parseInt(product.price.slice(0, -1)) +
@@ -88,7 +88,7 @@ function ProductDetail(props) {
             <div className="flex items-center border border-gray-300 rounded overflow-hidden">
               <button
                 onClick={() => decreaseFromCart(product.id)}
-                className="h-10 w-10 bg-transparent hover:bg-red-600 hover:text-white transition-all 
+                className="h-10 w-10 bg-transparent hover:bg-hoverSecondary hover:text-white transition-all 
                 duration-200 flex items-center justify-center p-0 m-0"
               >
                 <span className="text-2xl">-</span>
@@ -100,7 +100,7 @@ function ProductDetail(props) {
 
               <button
                 onClick={() => addToCart(product)}
-                className="h-10 w-10 bg-transparent hover:bg-rose-700 hover:text-white transition-all 
+                className="h-10 w-10 bg-transparent hover:bg-hoverSecondary hover:text-white transition-all 
                 duration-200 flex items-center justify-center p-0 m-0"
               >
                 <span className="text-2xl">+</span>
@@ -110,7 +110,7 @@ function ProductDetail(props) {
             {/* Buy */}
             <div>
               <button
-                className="py-2 md:px-8 px-4 bg-rose-700 hover:bg-rose-600 transform transition-all 
+                className="py-2 md:px-8 px-4 bg-secondary hover:bg-hoverSecondary transform transition-all 
                    duration-300 text-white rounded"
                 onClick={openModal}
               >
@@ -124,7 +124,7 @@ function ProductDetail(props) {
               onClick={() => toggleFavorite(product)}
             >
               {isFavorited(product.id) ? (
-                <IoHeart className="text-red-500 cursor-pointer" />
+                <IoHeart className="text-secondary cursor-pointer" />
               ) : (
                 <IoHeartOutline className="cursor-pointer" />
               )}

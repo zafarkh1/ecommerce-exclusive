@@ -76,7 +76,7 @@
         "desc": "A15 Bionic chip, Super Retina XDR displeyi va Pro kamera tizimiga ega eng so'nggi iPhone."
       },
       "luxury_watch": {
-        "title": "Lüks Soat",
+        "title": "Luxury Watch",
         "desc": "Premium dizayn va aniq vaqt ko'rsatish bilan nafis lüks soat."
       },
       "bluetooth_speaker": {
@@ -201,7 +201,7 @@
       "desc": "Mukammal kamera va ilg'or displey texnologiyalariga ega yuqori darajali smartfon."
     },
     "6": {
-      "title": "Boss soatlar",
+      "title": "Boss watches",
       "category": "Aksessuarlar",
       "desc": "Funktsional va moda birlashtirgan nafis va zamonaviy soatlar."
     },
@@ -221,7 +221,7 @@
     "desc": "Yuqori aniqlik va mukammal zoom imkoniyatlariga ega bo'lgan kompakt raqamli kamera."
   },
   "10": {
-    "title": "Aqlli soat",
+    "title": "Smart Watch",
     "category": "Elektronika",
     "desc": "Fitness kuzatuvchi va mobil bildirishnomalar bilan to'ldirilgan funksional soat."
   },
@@ -266,7 +266,7 @@
     "desc": "Yurak urishini, qadamlarni va uyqu tartibini nazorat qiladigan taqiladigan fitness tracker."
   },
   "19": {
-    "title": "Lüks Soat",
+    "title": "Luxury Watch",
     "category": "Aksessuarlar",
     "desc": "Yuqori sifatli dizayn va aniq vaqtni ko'rsatadigan elegant lüks soat."
   },

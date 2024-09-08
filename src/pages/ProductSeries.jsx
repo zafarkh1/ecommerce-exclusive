@@ -34,6 +34,10 @@ function ProductSeries() {
       return curr + acc;
     }, 0);
 
+  const handleNavigate = (id) => {
+    window.open(`/product/${id}`, "_blank");
+  };
+
   return (
     <div className="container mx-auto md:my-[10rem] my-[8rem] overflow-hidden">
       <h2 className="lg:text-4xl text-2xl font-medium text-center lg:text-left">
@@ -42,13 +46,15 @@ function ProductSeries() {
       {/*                   Products                 */}
       <div className="my-10 grid lg:grid-cols-2 gap-y-8">
         {filteredProducts.map((product, index) => (
-          <div key={index} className="flex gap-6">
+          <div key={index} className="flex lg:gap-6 gap-4">
             {/*             Image                 */}
             <div className="w-36 h-36 flex-shrink-0">
               <img
                 src={product.img}
                 alt={product.title}
-                className="h-full w-full object-cover border border-gray-200 rounded-md"
+                className="h-full w-full object-cover border border-gray-200 rounded-md cursor-pointer 
+                hover:scale-105 transition-all duration-500"
+                onClick={() => handleNavigate(product.id)}
               />
             </div>
 
@@ -58,33 +64,34 @@ function ProductSeries() {
                 <h5 className="lg:text-2xl text-xl font-medium">
                   {product.title}
                 </h5>
-                <p className="w-4/5">
+                <p className="w-4/5 lg:text-base text-sm">
                   {product.desc.split(" ").slice(0, 12).join(" ")}
                   {product.desc.split(" ").length > 12 && "..."}
                 </p>
               </div>
 
-              <div className="mt-auto flex items-center gap-4 ">
-                <p className="text-xl text-red-700">
-                  {product.price} {" * "}
+              <div className="flex items-center lg:gap-4 gap-2 sm:mt-auto mt-2">
+                <p className="lg:text-xl text:base text-secondary font-medium">
+                  {product.price}{" "}
+                  <span className="hidden lg:inline-block">{" * "}</span>
                 </p>
                 {/*              Count               */}
                 <div className="flex items-center border border-gray-300 rounded w-fit">
                   <button
                     onClick={() => decreaseFromCart(product.id)}
-                    className="h-6 w-10 bg-transparent hover:bg-red-600 hover:text-white transition-all 
+                    className="lg:h-6 h-4 lg:w-10 w-6 bg-transparent lg:hover:bg-hoverSecondary lg:hover:text-white transition-all 
                 duration-200 flex items-center justify-center p-0 m-0"
                   >
                     <span className="text-2xl">-</span>
                   </button>
 
-                  <div className="md:px-8 px-4 py-[2px] border-x-2 border-gray-300 font-medium text-sm">
+                  <div className="lg:px-8 px-3 py-[2px] border-x-2 border-gray-300 font-medium text-sm">
                     {cart.find((item) => item.id === product.id)?.quantity || 0}
                   </div>
 
                   <button
                     onClick={() => addToCart(product)}
-                    className="h-6 w-10 bg-transparent hover:bg-rose-700 hover:text-white transition-all 
+                    className="lg:h-6 h-4 lg:w-10 w-6 bg-transparent lg:hover:bg-hoverSecondary lg:hover:text-white transition-all 
                 duration-200 flex items-center justify-center p-0 m-0"
                   >
                     <span className="text-2xl">+</span>
@@ -97,9 +104,9 @@ function ProductSeries() {
       </div>
       {/*                    Total  and Buy btn         */}
       <div className="flex justify-between items-center mt-16">
-        <div></div>
+        <div className="hidden lg:block"></div>
         <button
-          className="xl:py-4 py-2 xl:px-16 px-4 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 text-white rounded"
+          className="xl:py-4 py-2 xl:px-16 px-4 bg-secondary hover:bg-hoverSecondary transform transition-all duration-300 text-white rounded"
           onClick={openModal}
         >
           {t("series.buyNow")}

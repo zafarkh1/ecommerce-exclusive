@@ -63,7 +63,7 @@ function Footer(props) {
                   >
                     {item.title}
                     <span
-                      className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
+                      className="absolute -bottom-2 -left-2 -right-2 h-1 bg-secondary transform scale-x-0 
                     group-hover:scale-x-90 transition-transform duration-500 ease-linear rounded-full"
                     ></span>
                   </Link>
@@ -93,7 +93,7 @@ function Footer(props) {
                   >
                     {item.title}
                     <span
-                      className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 
+                      className="absolute -bottom-2 -left-2 -right-2 h-1 bg-secondary transform scale-x-0 
                     group-hover:scale-x-90 transition-transform duration-500 ease-linear rounded-full"
                     ></span>
                   </Link>

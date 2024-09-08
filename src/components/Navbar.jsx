@@ -45,7 +45,7 @@ function Navbar(props) {
 
   return (
     <div
-      className={`fixed top-[4rem] left-0 right-0 z-10 transition-all duration-100 ease-linear ${
+      className={`fixed top-[3.7rem] left-0 right-0 z-10 transition-all duration-100 ease-linear ${
         isOpen ? "border-b-0 " : "border-b-2"
       }  ${scrolled ? "bg-white shadow-lg" : "bg-transparent"}`}
     >
@@ -66,9 +66,10 @@ function Navbar(props) {
         </div>
 
         <ul
-          className={`lg:static fixed top-[2.7rem] left-0 h-full lg:w-auto sm:w-1/3 w-3/5 flex lg:items-center lg:flex-row flex-col lg:gap-12 gap-6 text-xl lg:bg-transparent bg-gray-800 lg:text-black text-white lg:px-0 px-6 lg:py-0 py-10 transition-all duration-500 ease-in ${
-            open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-          }`}
+          className={`lg:static fixed top-[2.7rem] left-0 h-full lg:w-auto sm:w-1/3 w-3/5 flex lg:items-center lg:flex-row flex-col 
+            lg:gap-12 gap-6 text-xl lg:bg-transparent bg-gray-900 lg:text-black text-white lg:px-0 px-6 lg:py-0 py-10 transition-all duration-500 ease-in ${
+              open ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+            }`}
         >
           <li>
             <button
@@ -91,7 +92,7 @@ function Navbar(props) {
               >
                 {item.title}
                 <span
-                  className="absolute -bottom-2 -left-2 -right-2 h-1 bg-teal-500 transform scale-x-0 group-hover:scale-x-90 
+                  className="absolute -bottom-2 -left-2 -right-2 h-1 bg-secondary transform scale-x-0 group-hover:scale-x-90 
                 transition-transform duration-500 ease-linear rounded-full"
                 ></span>
               </Link>
@@ -105,7 +106,7 @@ function Navbar(props) {
           </button>
           <div className="relative group">
             <CiHeart className="hover:cursor-pointer" />
-            <span className="absolute -top-1 right-0 bg-red-700 text-white h-4 w-4 text-center rounded-full text-xs">
+            <span className="absolute -top-1 right-0 bg-secondary text-white h-4 w-4 text-center rounded-full text-xs">
               {favorites.length}
             </span>
             <div
@@ -124,7 +125,7 @@ function Navbar(props) {
                       className="rounded-full p-1 text-xl bg-white"
                     >
                       {isFavorited(item.id) ? (
-                        <IoHeart className="text-red-500" />
+                        <IoHeart className="text-secondary" />
                       ) : (
                         <IoHeartOutline />
                       )}
@@ -146,7 +147,7 @@ function Navbar(props) {
                 window.scrollTo(0, 0);
               }}
             />
-            <span className="absolute -top-1 right-0 bg-red-700 text-white h-4 w-4 text-center rounded-full text-xs z-20">
+            <span className="absolute -top-1 right-0 bg-secondary text-white h-4 w-4 text-center rounded-full text-xs z-20">
               {cart.length}
             </span>
           </div>

@@ -27,7 +27,7 @@ function Cart(props) {
       <div className="my-10 grid lg:grid-cols-2 gap-y-8">
         {cart.length > 0 &&
           cart.map((product, index) => (
-            <div key={index} className="flex gap-6">
+            <div key={index} className="flex lg:gap-6 gap-4">
               {/* Image */}
               <div className="w-36 h-36 flex-shrink-0">
                 <img
@@ -45,36 +45,37 @@ function Cart(props) {
                   <h5 className="lg:text-2xl text-xl font-medium">
                     {product.title}
                   </h5>
-                  <p className="w-4/5">
+                  <p className="w-4/5 lg:text-base text-sm">
                     {product.desc.split(" ").slice(0, 12).join(" ")}
                     {product.desc.split(" ").length > 12 && "..."}
                   </p>
                 </div>
 
-                <div className="mt-auto flex items-center gap-4 ">
+                <div className="flex items-center lg:gap-4 gap-2 sm:mt-auto mt-2">
                   {/* Price */}
-                  <p className="text-xl text-red-700 font-medium">
-                    {product.price} {" * "}
+                  <p className="lg:text-xl text:base text-secondary font-medium">
+                    {product.price}{" "}
+                    <span className="hidden lg:inline-block">{" * "}</span>
                   </p>
 
                   {/* Count */}
                   <div className="flex items-center border border-gray-300 rounded w-fit">
                     <button
                       onClick={() => decreaseFromCart(product.id)}
-                      className="h-6 w-10 bg-transparent hover:bg-red-600 hover:text-white transition-all 
+                      className="lg:h-6 h-4 lg:w-10 w-6 bg-transparent lg:hover:bg-hoverSecondary lg:hover:text-white transition-all 
                 duration-200 flex items-center justify-center p-0 m-0"
                     >
                       <span className="text-2xl">-</span>
                     </button>
 
-                    <div className="md:px-8 px-4 py-[2px] border-x-2 border-gray-300 font-medium text-sm">
+                    <div className="lg:px-8 px-3 py-[2px] border-x-2 border-gray-300 font-medium text-sm">
                       {cart.find((item) => item.id === product.id)?.quantity ||
                         0}
                     </div>
 
                     <button
                       onClick={() => addToCart(product)}
-                      className="h-6 w-10 bg-transparent hover:bg-rose-700 hover:text-white transition-all 
+                      className="lg:h-6 h-4 lg:w-10 w-6 bg-transparent lg:hover:bg-hoverSecondary lg:hover:text-white transition-all 
                 duration-200 flex items-center justify-center p-0 m-0"
                     >
                       <span className="text-2xl">+</span>
@@ -84,7 +85,7 @@ function Cart(props) {
                   {/* Delete */}
                   <button
                     onClick={() => removeFromCart(product.id)}
-                    className="text-red-500 hover:text-red-700 text-2xl"
+                    className="text-secondary hover:text-hoverSecondary text-2xl"
                   >
                     <MdDeleteForever />
                   </button>
@@ -96,9 +97,9 @@ function Cart(props) {
       {/* Total and Buy button */}
       {cart.length > 0 && (
         <div className="flex justify-between items-center mt-16">
-          <div></div>
+          <div className="hidden lg:block"></div>
           <button
-            className="xl:py-4 py-2 xl:px-16 px-4 bg-rose-700 hover:bg-rose-600 transform transition-all duration-300 text-white rounded"
+            className="xl:py-4 py-2 xl:px-16 px-4 bg-secondary hover:bg-hoverSecondary transform transition-all duration-300 text-white rounded"
             onClick={openModal}
           >
             {t("cart.buyNow")}

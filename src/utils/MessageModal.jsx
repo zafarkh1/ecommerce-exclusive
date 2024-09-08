@@ -120,7 +120,7 @@ function MessageModal({ price }) {
                 className="lg:px-4 lg:py-4 px-2 py-2 w-full rounded-md outline-none border-gray-200 border"
               />
               {nameError && (
-                <p className="text-red-600 text-sm mt-2">{nameError}</p>
+                <p className="text-secondary text-sm mt-2">{nameError}</p>
               )}
             </div>
 
@@ -140,13 +140,13 @@ function MessageModal({ price }) {
                 inputClass="input"
               />
               {telError && (
-                <p className="text-red-600 text-xl mt-0">{telError}</p>
+                <p className="text-secondary text-xl mt-0">{telError}</p>
               )}
             </div>
 
             <button
               type="submit"
-              className="w-full lg:py-4 py-2 lg:text-lg bg-rose-700 hover:bg-rose-600 transition-all duration-300 text-white rounded-md"
+              className="w-full lg:py-4 py-2 lg:text-lg bg-secondary hover:bg-hoverSecondary transition-all duration-300 text-white rounded-md"
             >
               {loading ? t("MsgModal.loadingBtn") : t("MsgModal.btn")}
             </button>

@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        secondary: "#db4444",
+        hoverSecondary: "#ff6666",
+      },
+    },
     container: {
       padding: {
         DEFAULT: "1rem",

@@ -23,8 +23,8 @@ function Services() {
 
   return (
     <div id="services" className="container mx-auto lg:mb-16 mb-12">
-      <p className="text-red-700 flex items-center gap-4 lg:text-lg">
-        <span className="bg-red-700 h-8 w-3 rounded-sm"></span>
+      <p className="text-secondary flex items-center gap-4 lg:text-lg">
+        <span className="bg-secondary h-8 w-3 rounded-sm"></span>
         <span className="font-semibold">{t("services.title")}</span>
       </p>
       <h2 className="lg:text-4xl text-2xl font-medium lg:mt-4 lg:mb-9 mt-3 mb-7 text-center lg:text-left">

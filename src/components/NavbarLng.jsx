@@ -27,7 +27,7 @@ function NavbarLng(props) {
         <div className="flex gap-4">
           <p className="hidden md:block">{t("navbarLng.sale")}</p>
           <Link
-            className="underline underline-offset-2"
+            className="underline underline-offset-2 hover:text-secondary transition-all duration-300"
             to="sale"
             spy={true}
             smooth={true}
@@ -40,7 +40,7 @@ function NavbarLng(props) {
         </div>
         <div
           ref={dropdownRef}
-          className="lg:mb-0 mb-4 relative group"
+          className="relative group"
           onClick={() => setShowDropdown(!showDropdown)}
         >
           <button className="focus:outline-none bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
