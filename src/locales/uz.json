@@ -110,15 +110,6 @@
         {"title": "Do‘kon", "link": "shop"}
       ]
     },
-    "quick_links": {
-      "title": "Tezkor havolalar",
-      "links": [
-        {"title": "Maxfiylik siyosati", "link": "policy"},
-        {"title": "Foydalanish shartlari", "link": "terms"},
-        {"title": "Savollar", "link": "faq"},
-        {"title": "Aloqa", "link": "contact"}
-      ]
-    },
     "download_app": {
       "title": "Dastur yuklash",
       "description": "Dastur yangi foydalanuvchilar uchun $3 tejang",

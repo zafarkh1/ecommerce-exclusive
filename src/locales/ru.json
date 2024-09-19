@@ -110,15 +110,6 @@
         {"title": "Магазин", "link": "shop"}
       ]
     },
-    "quick_links": {
-      "title": "Быстрая ссылка",
-      "links": [
-        {"title": "Политика конфиденциальности", "link": "policy"},
-        {"title": "Условия использования", "link": "terms"},
-        {"title": "Вопросы", "link": "faq"},
-        {"title": "Контакт", "link": "contact"}
-      ]
-    },
     "download_app": {
       "title": "Скачать приложение",
       "description": "Сэкономьте $3 при первой покупке в приложении",

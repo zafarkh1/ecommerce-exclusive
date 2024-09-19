@@ -10,13 +10,14 @@ import { FaTimes } from "react-icons/fa";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useStore } from "../zustand/store";
 import { useModalStore } from "../zustand/modalStore";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
-import { Link } from "react-scroll";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 function Navbar(props) {
-  const { t } = useTranslation();
+  const [targetSection, setTargetSection] = useState(null);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const { t } = useTranslation();
   const { cart, favorites, toggleFavorite } = useStore();
   const { isOpen } = useModalStore();
   const navigate = useNavigate();
@@ -25,11 +26,9 @@ function Navbar(props) {
     { title: t("navbar.products"), link: "products" },
     { title: t("navbar.arrivals"), link: "arrivals" },
     { title: t("navbar.services"), link: "services" },
-    { title: t("navbar.sign_in"), link: "/signin" },
   ];
 
   const isFavorited = (id) => favorites.some((item) => item.id === id);
-  const navbarHeight = 140;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +41,37 @@ function Navbar(props) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (location.pathname === "/" && targetSection) {
+      const section = document.getElementById(targetSection);
+      if (section) {
+        const yOffset = -84; // Adjust according to your navbar height (84px here)
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+      setTargetSection(null); // Clear the target after scrolling
+    }
+  }, [location, targetSection]);
+
+  const handleLinkClick = (link) => {
+    if (location.pathname !== "/") {
+      // If we're not on the homepage, navigate to the homepage first
+      setTargetSection(link); // Store the section to scroll to
+      navigate("/");
+    } else {
+      // If already on the homepage, scroll immediately
+      const section = document.getElementById(link);
+      if (section) {
+        const yOffset = -84; // Adjust according to your navbar height
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+    setOpen(false);
+  };
 
   return (
     <div
@@ -81,21 +111,16 @@ function Navbar(props) {
           </li>
           {Linkitems.map((item, index) => (
             <li key={index}>
-              <Link
-                className="relative group"
-                to={item.link}
-                spy={true}
-                smooth={true}
-                offset={-navbarHeight}
-                duration={1500}
-                href={item.link}
+              <span
+                className="relative group cursor-pointer"
+                onClick={() => handleLinkClick(item.link)}
               >
                 {item.title}
                 <span
                   className="absolute -bottom-2 -left-2 -right-2 h-1 lg:bg-secondary transform scale-x-0 group-hover:scale-x-90 
                 transition-transform duration-500 ease-linear rounded-full"
                 ></span>
-              </Link>
+              </span>
             </li>
           ))}
         </ul>
@@ -119,7 +144,9 @@ function Navbar(props) {
                     key={index}
                     className="flex items-center justify-between relative"
                   >
-                    <span className="capitalize text-lg">{item.title}</span>
+                    <span className="capitalize text-lg text-black">
+                      {item.title}
+                    </span>
                     <button
                       onClick={() => toggleFavorite(item)}
                       className="rounded-full p-1 text-xl bg-white"

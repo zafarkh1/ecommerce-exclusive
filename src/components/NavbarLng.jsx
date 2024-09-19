@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 
@@ -19,6 +19,20 @@ function NavbarLng(props) {
     i18n.changeLanguage(lang);
     setShowDropdown(false);
   };
+
+  useEffect(() => {
+    // Close the dropdown if clicking outside of it
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   return (
     <div className="bg-black text-gray-100 fixed top-0 left-0 right-0 z-20">

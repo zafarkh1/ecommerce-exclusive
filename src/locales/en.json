@@ -103,20 +103,11 @@
     "account": {
       "title": "Account",
       "links": [
-        {"title": "My account", "link": "account"},
+        {"title": "Series", "link": "account"},
         {"title": "Login / Register", "link": "auth"},
         {"title": "Cart", "link": "cart"},
         {"title": "Wishlist", "link": "wishlist"},
         {"title": "Shop", "link": "shop"}
-      ]
-    },
-    "quick_links": {
-      "title": "Quick Link",
-      "links": [
-        {"title": "Privacy Policy", "link": "policy"},
-        {"title": "Terms of Use", "link": "terms"},
-        {"title": "FAQ", "link": "faq"},
-        {"title": "Contact", "link": "contact"}
       ]
     },
     "download_app": {

@@ -20,7 +20,7 @@ function Arrival() {
 
       <div className="grid lg:grid-cols-2 lg:gap-8 gap-4 lg:my-8 text-white">
         <div
-          className="relative bg-no-repeat bg-center bg-contain bg-black h-[15rem] lg:h-[30rem] rounded-xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+          className="relative bg-no-repeat bg-center bg-contain bg-black h-[15rem] lg:h-[30rem] rounded-xl transition-transform duration-300 lg:hover:scale-[1.02] lg:hover:shadow-lg cursor-pointer"
           style={{
             backgroundImage:
               "url('https://ae04.alicdn.com/kf/S8966835707534f889c354bad660e28efN.jpg')",
@@ -39,7 +39,7 @@ function Arrival() {
             <p className="md:text-base text-sm">
               {t("arrival.products.ps5.desc")}
             </p>
-            <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
+            <button className="underline underline-offset-4 lg:hover:text-secondary transition-colors duration-300">
               {t("arrival.shop_now")}
             </button>
           </div>
@@ -47,7 +47,7 @@ function Arrival() {
 
         <div className="grid grid-rows-2 gap-8 h-[30rem]">
           <div
-            className="relative bg-contain bg-black bg-no-repeat bg-right rounded-xl h-[15rem] lg:h-auto transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+            className="relative bg-contain bg-black bg-no-repeat bg-right rounded-xl h-[15rem] lg:h-auto transition-transform duration-300 lg:hover:scale-[1.02] lg:hover:shadow-lg cursor-pointer"
             style={{
               backgroundImage:
                 "url('https://www.cnet.com/a/img/resize/4176b2e9cb62db9dccea926e3b5076e184e377ba/hub/2021/12/10/955a0f0d-e82f-4883-a1c3-48c9d0bec41f/splash.jpg?auto=webp&fit=crop&height=675&width=1200')",
@@ -66,7 +66,7 @@ function Arrival() {
               <p className="md:text-base text-sm">
                 {t("arrival.products.iphone13.desc")}
               </p>
-              <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
+              <button className="underline underline-offset-4 lg:hover:text-secondary transition-colors duration-300">
                 {t("arrival.shop_now")}
               </button>
             </div>
@@ -74,7 +74,7 @@ function Arrival() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-8 gap-4">
             <div
-              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl transition-transform duration-300 lg:hover:scale-[1.02] lg:hover:shadow-lg cursor-pointer"
               style={{
                 backgroundImage:
                   "url('https://wallup.net/wp-content/uploads/2017/11/17/230726-watch-luxury_watches-748x374.jpg')",
@@ -93,14 +93,14 @@ function Arrival() {
                 <p className="md:text-base text-sm">
                   {t("arrival.products.luxury_watch.desc")}
                 </p>
-                <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
+                <button className="underline underline-offset-4 lg:hover:text-secondary transition-colors duration-300">
                   {t("arrival.shop_now")}
                 </button>
               </div>
             </div>
 
             <div
-              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+              className="relative bg-contain bg-black bg-no-repeat bg-right h-[14rem] rounded-xl transition-transform duration-300 lg:hover:scale-[1.02] lg:hover:shadow-lg cursor-pointer"
               style={{
                 backgroundImage:
                   "url('https://images.pexels.com/photos/9767549/pexels-photo-9767549.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
@@ -119,7 +119,7 @@ function Arrival() {
                 <p className="md:text-base text-sm">
                   {t("arrival.products.bluetooth_speaker.desc")}
                 </p>
-                <button className="underline underline-offset-4 hover:text-secondary transition-colors duration-300">
+                <button className="underline underline-offset-4 lg:hover:text-secondary transition-colors duration-300">
                   {t("arrival.shop_now")}
                 </button>
               </div>

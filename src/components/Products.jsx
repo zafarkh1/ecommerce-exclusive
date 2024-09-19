@@ -57,7 +57,7 @@ function Products() {
                   window.scrollTo(0, 0);
                 }}
                 className="object-cover w-full h-[18rem] sm:h-[15rem] md:h-[12rem] lg:h-[14rem]
-                transition-transform transform duration-300 hover:scale-105"
+                transition-transform transform duration-300 lg:hover:scale-105"
               />
 
               {/* Toggle Like Icon */}
@@ -72,7 +72,7 @@ function Products() {
                 )}
               </button>
 
-              <div className="absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in">
+              <div className="absolute bottom-0 left-0 right-0 lg:opacity-0 lg:group-hover:opacity-100 opacity-100 transition-all duration-500 ease-in">
                 <button
                   className="bg-black text-white w-full py-2 capitalize"
                   onClick={() => addToCart(item)}
@@ -101,7 +101,7 @@ function Products() {
       <div className="flex justify-center items-center lg:my-12 my-6">
         {visible < filteredProducts.length ? (
           <button
-            className="lg:py-2 py-1 lg:px-6 px-3 bg-secondary hover:bg-hoverSecondary transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
+            className="lg:py-2 py-1 lg:px-6 px-3 bg-secondary hover:bg-hoverSecondary transform transition-all duration-300 lg:active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible((prev) => prev + 4)}
           >
             {t("product.view_all_products")}
@@ -110,7 +110,7 @@ function Products() {
           <div></div>
         ) : (
           <button
-            className="lg:py-2 py-1 lg:px-6 px-3 bg-secondary hover:bg-hoverSecondary  transform transition-all duration-300 active:scale-105 text-white cursor-pointer rounded-lg"
+            className="lg:py-2 py-1 lg:px-6 px-3 bg-secondary hover:bg-hoverSecondary  transform transition-all duration-300 lg:active:scale-105 text-white cursor-pointer rounded-lg"
             onClick={() => setVisible(4)}
           >
             {t("product.view_less_products")}

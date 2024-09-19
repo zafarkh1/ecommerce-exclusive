@@ -56,7 +56,7 @@ function Showcase() {
                 <h1 className="xl:text-6xl xl:leading-[4rem] md:text-4xl text-2xl w-4/5 lg:my-8 my-4">
                   {t("showcase.up_to_discount")}
                 </h1>
-                <button className="underline underline-offset-2 xl:text-2xl md:text-xl text-base flex items-center gap-3 hover:text-secondary">
+                <button className="underline underline-offset-2 xl:text-2xl md:text-xl text-base flex items-center gap-3 lg:hover:text-secondary">
                   <span>{t("showcase.shop_now")}</span>
                   <span>
                     <FaArrowRight />

@@ -2,14 +2,13 @@ import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { Link as RouterLink } from "react-router-dom";
-import { Link } from "react-scroll";
 
 function Footer(props) {
   const { t } = useTranslation();
 
   return (
     <footer className="bg-black text-white py-8">
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-8">
         {/* Subscribe Section */}
         <div className="col-span-1 md:col-span-1">
           <h4 className="lg:text-3xl text-xl font-semibold tracking-widest">
@@ -45,64 +44,6 @@ function Footer(props) {
           <p className="sm:text-base text-sm">{t("footer.support.phone")}</p>
         </div>
 
-        {/* Account Links */}
-        <div className="col-span-1 md:col-span-1">
-          <h3 className="font-semibold text-lg">{t("footer.account.title")}</h3>
-          <ul className="mt-4 space-y-2">
-            {t("footer.account.links", { returnObjects: true }).map(
-              (item, index) => (
-                <li key={index}>
-                  <Link
-                    className="relative group"
-                    to={item.link}
-                    spy={true}
-                    smooth={true}
-                    // offset={-navbarHeight}
-                    duration={1500}
-                    href={item.link}
-                  >
-                    {item.title}
-                    <span
-                      className="absolute -bottom-2 -left-2 -right-2 h-1 lg:bg-secondary transform scale-x-0 
-                    group-hover:scale-x-90 transition-transform duration-500 ease-linear rounded-full"
-                    ></span>
-                  </Link>
-                </li>
-              )
-            )}
-          </ul>
-        </div>
-
-        {/* Quick Links */}
-        <div className="col-span-1 md:col-span-1">
-          <h3 className="font-semibold text-lg">
-            {t("footer.quick_links.title")}
-          </h3>
-          <ul className="mt-4 space-y-2">
-            {t("footer.quick_links.links", { returnObjects: true }).map(
-              (item, index) => (
-                <li key={index}>
-                  <Link
-                    className="relative group"
-                    to={item.link}
-                    spy={true}
-                    smooth={true}
-                    // offset={-navbarHeight}
-                    duration={1500}
-                    href={item.link}
-                  >
-                    {item.title}
-                    <span
-                      className="absolute -bottom-2 -left-2 -right-2 h-1 lg:bg-secondary transform scale-x-0 
-                    group-hover:scale-x-90 transition-transform duration-500 ease-linear rounded-full"
-                    ></span>
-                  </Link>
-                </li>
-              )
-            )}
-          </ul>
-        </div>
-
         {/* Download App Section */}
         <div className="col-span-2 xl:col-span-1 sm:mx-0 mx-auto sm:text-left text-center flex flex-col sm:items-baseline items-center">
           <h3 className="font-semibold text-lg">
@@ -112,16 +53,28 @@ function Footer(props) {
             {t("footer.download_app.description")}
           </p>
           <div className="flex gap-2 mt-4">
-            <img
-              src="/images/playmarket.png"
-              alt={t("footer.download_app.play_store")}
-              className="h-10"
-            />
-            <img
-              src="/images/appstore.png"
-              alt={t("footer.download_app.app_store")}
-              className="h-10"
-            />
+            <a
+              href="https://play.google.com/store/apps"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/playmarket.png"
+                alt={t("footer.download_app.play_store")}
+                className="h-10"
+              />
+            </a>
+            <a
+              href="https://apps.apple.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/appstore.png"
+                alt={t("footer.download_app.app_store")}
+                className="h-10"
+              />
+            </a>
           </div>
           <div className="mt-4 flex gap-4 text-white text-xl">
             <a
